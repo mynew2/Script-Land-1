@@ -1,12 +1,12 @@
---[[ WoTD License - 
+--[[ ArcPro Speculation License - 
 This software is provided as free and open source by the
-team of The WoTD Team. This script was written and is
+team of The ArcPro Speculation Team. This script was written and is
 protected by the GPL v2. Please give credit where credit
 is due, if modifying, redistributing and/or using this 
 software. Thank you.
-Thank: zdroid9770; for the Script
+Author: ArcPro Speculation
 ~~End of License... Please Stand By...
--- WoTD Team, Janurary 19, 2010. ]]
+-- ArcPro Speculation, January 19, 2011 - 2013. ]]
 
 --Ashenvale Outrunner
 function AshenvaleOutrunner_OnCombat(Unit, Event)
@@ -1977,3 +1977,29 @@ end
 RegisterUnitEvent(3752, 1, "XavianRogue_OnCombat")
 RegisterUnitEvent(3752, 2, "XavianRogue_OnLeaveCombat")
 RegisterUnitEvent(3752, 4, "XavianRogue_OnDied")
+
+--Branch Snapper
+function BranchSnapper_OnCombat(Unit, Event)
+	Unit:RegisterEvent("BranchSnapper_DeadlyPoison", 10000, 0)
+	Unit:RegisterEvent("BranchSnapper_KnockAway", 8000, 0)
+end
+
+function BranchSnapper_DeadlyPoison(pUnit, Event) 
+	pUnit:FullCastSpellOnTarget(3583, pUnit:GetMainTank()) 
+end
+
+function BranchSnapper_KnockAway(pUnit, Event) 
+	pUnit:FullCastSpellOnTarget(10101, pUnit:GetMainTank()) 
+end
+
+function BranchSnapper_OnLeaveCombat(Unit, Event) 
+	Unit:RemoveEvents() 
+end
+
+function BranchSnapper_OnDied(Unit, Event) 
+	Unit:RemoveEvents()
+end
+
+RegisterUnitEvent(10641, 1, "BranchSnapper_OnCombat")
+RegisterUnitEvent(10641, 2, "BranchSnapper_OnLeaveCombat")
+RegisterUnitEvent(10641, 4, "BranchSnapper_OnDied")
