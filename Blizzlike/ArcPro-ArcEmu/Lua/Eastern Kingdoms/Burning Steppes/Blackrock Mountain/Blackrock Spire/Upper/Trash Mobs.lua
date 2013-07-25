@@ -7,5 +7,3 @@ software. Thank you.
 Author: ArcPro Speculation
 ~~End of License... Please Stand By...
 -- ArcPro Speculation, January 19, 2011 - 2013. ]]
-
-print ("Failed: Blackrockmountain - Blackwing Lair - Nefarian")

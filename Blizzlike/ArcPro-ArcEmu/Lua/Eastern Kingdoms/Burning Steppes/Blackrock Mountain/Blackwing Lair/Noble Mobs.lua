@@ -8,11 +8,19 @@ Author: ArcPro Speculation
 ~~End of License... Please Stand By...
 -- ArcPro Speculation, January 19, 2011 - 2013. ]]
 
+print ("Failed: Blackrockmountain - Blackwing Lair - Chromaggus")
+print ("Failed: Blackrockmountain - Blackwing Lair - Ebonroc")
+print ("Failed: Blackrockmountain - Blackwing Lair - Firemaw")
+print ("Failed: Blackrockmountain - Blackwing Lair - Flamegor")
+print ("Failed: Blackrockmountain - Blackwing Lair - Nefarian")
+print ("Failed: Blackrockmountain - Blackwing Lair - Razorgore the Untamed")
+print ("Failed: Blackrockmountain - Blackwing Lair - Vaelastrasza the Corrupt")
+
+-- Broodlord Lashlayer
 --[[
 Broodlord Lashlayer yells: Clever, mortals - but I am not so easily lured away from my sanctum!
 Broodlord Lashlayer yells: None of your kind should be here! You've doomed only yourselves!
 ]]--
-
 local bl = pUnit
 
 function Broodlord_Lashlayer_OnCombat(pUnit, Event)

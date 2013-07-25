@@ -8,6 +8,7 @@ Author: ArcPro Speculation
 ~~End of License... Please Stand By...
 -- ArcPro Speculation, January 19, 2011 - 2013. ]]
 
+-- Ysondre
 math.randomseed(os.time())
 
 function Ysondre_OnCombat(Unit, Event)
@@ -16,7 +17,7 @@ function Ysondre_OnCombat(Unit, Event)
 	Unit:RegisterEvent("Ysondre_DruidSpawn", 5000, 0)
 	Unit:RegisterEvent("Ysondre_Breath", math.random(9000,10000), 1)
 	Unit:RegisterEvent("Ysondre_TailSweep", math.random(2000,2500),1)
-	Unit:RegisterEvent("Ysondre_LightningWave", math.random(15000, 18000), 1)
+	Unit:RegisterEvent("Ysondre_LightningWave", math.random(15000,18000), 1)
 end
 
 function Ysondre_DruidSpawn(Unit, Event)
@@ -74,7 +75,7 @@ end
 --[[
 function Emeriss_Fog(Unit, Event)
 	Unit:AddAssistTarget(Unit:SpawnCreature(15224, Unit:GetX(), Unit:GetY(), Unit:GetZ(), Unit:GetO(),14, 120000))
-	Unit:RegisterEvent("Emeriss_Fog",120000, 1)
+	Unit:RegisterEvent("Emeriss_Fog", 120000, 1)
 end
 ]]
 function Ysondre_OnKill(Unit, Event, pMisc)
@@ -184,17 +185,17 @@ end
 --Demented Druid Spirit AI
 function Druid_Moonfire(pUnit, Event)
     pUnit:FullCastSpellOnTarget(24957, pUnit:GetRandomPlayer(0))
-	pUnit:RegisterEvent("Druid_Moonfire", math.random(6000, 9000), 1)
+	pUnit:RegisterEvent("Druid_Moonfire", math.random(6000,9000), 1)
 end
 
 function Druid_Silence(pUnit, Event)
     pUnit:FullCastSpellOnTarget(6726, pUnit:GetRandomPlayer(0))
-	pUnit:RegisterEvent("Druid_Silence", math.random(8000, 12000), 1)
+	pUnit:RegisterEvent("Druid_Silence", math.random(8000,12000), 1)
 end
 
 function Druid_OnEnterCombat(pUnit, Event)
-	pUnit:RegisterEvent("Druid_Moonfire", math.random(6000, 9000), 1)
-	pUnit:RegisterEvent("Druid_Silence", math.random(8000, 12000), 1)
+	pUnit:RegisterEvent("Druid_Moonfire", math.random(6000,9000), 1)
+	pUnit:RegisterEvent("Druid_Silence", math.random(8000,12000), 1)
 end
 
 RegisterUnitEvent(15260, 1, "Druid_OnEnterCombat")

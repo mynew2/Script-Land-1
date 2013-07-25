@@ -8,4 +8,9 @@ Author: ArcPro Speculation
 ~~End of License... Please Stand By...
 -- ArcPro Speculation, January 19, 2011 - 2013. ]]
 
-print ("Failed: Blackrockmountain - Blackwing Lair - Flamegor")
+print ("Failed: Blackrockmountain - Blackrock Spire - Awbee")
+print ("Failed: Blackrockmountain - Blackrock Spire - Bijou")
+print ("Failed: Blackrockmountain - Blackrock Spire - Finkle Einorn")
+print ("Failed: Blackrockmountain - Blackrock Spire - Lord Victor Nefarius")
+print ("Failed: Blackrockmountain - Blackrock Spire - Vaelan")
+print ("Failed: Blackrockmountain - Blackrock Spire - Warosh")
