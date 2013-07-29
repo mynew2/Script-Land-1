@@ -1,7 +1,7 @@
 /*
  * ArcPro MMORPG Server
- * Copyright (C) 2011-2013 ArcPro Speculation <http://arcpro.sexyi.am/>
- * Copyright (C) 1994-2013 Lua <http://www.lua.org>
+ * Copyright (c) 2011-2013 ArcPro Speculation <http://arcpro.sexyi.am/>
+ * Copyright (c) 1994-2013 Lua <http://www.lua.org>
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -42,7 +42,7 @@ static void PrintString(const TString* ts)
  for (i=0; i<n; i++)
  {
   int c=s[i];
-  switch (C)
+  switch (c)
   {
    case '"': printf("\\\""); break;
    case '\\': printf("\\\\"); break;
@@ -54,7 +54,7 @@ static void PrintString(const TString* ts)
    case '\t': printf("\\t"); break;
    case '\v': printf("\\v"); break;
    default:	if (isprint((unsigned char)c))
-   			putchar(C);
+   			putchar(c);
 		else
 			printf("\\%03u",(unsigned char)c);
   }
@@ -107,7 +107,7 @@ static void PrintCode(const Proto* f)
    case iABC:
     printf("%d",a);
     if (getBMode(o)!=OpArgN) printf(" %d",ISK(b) ? (-1-INDEXK(b)) : b);
-    if (getCMode(o)!=OpArgN) printf(" %d",ISK(C) ? (-1-INDEXK(C)) : c);
+    if (getCMode(o)!=OpArgN) printf(" %d",ISK(c) ? (-1-INDEXK(c)) : c);
     break;
    case iABx:
     if (getBMode(o)==OpArgK) printf("%d %d",a,-1-bx); else printf("%d %d",a,bx);
@@ -131,7 +131,7 @@ static void PrintCode(const Proto* f)
     break;
    case OP_GETTABLE:
    case OP_SELF:
-    if (ISK(C)) { printf("\t; "); PrintConstant(f,INDEXK(C)); }
+    if (ISK(c)) { printf("\t; "); PrintConstant(f,INDEXK(c)); }
     break;
    case OP_SETTABLE:
    case OP_ADD:
@@ -142,12 +142,12 @@ static void PrintCode(const Proto* f)
    case OP_EQ:
    case OP_LT:
    case OP_LE:
-    if (ISK(b) || ISK(C))
+    if (ISK(b) || ISK(c))
     {
      printf("\t; ");
      if (ISK(b)) PrintConstant(f,INDEXK(b)); else printf("-");
      printf(" ");
-     if (ISK(C)) PrintConstant(f,INDEXK(C)); else printf("-");
+     if (ISK(c)) PrintConstant(f,INDEXK(c)); else printf("-");
     }
     break;
    case OP_JMP:

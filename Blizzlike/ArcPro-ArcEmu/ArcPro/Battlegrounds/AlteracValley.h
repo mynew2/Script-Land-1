@@ -1,8 +1,8 @@
 /*
  * ArcPro MMORPG Server
- * Copyright (C) 2011-2013 ArcPro Speculation <http://arcpro.sexyi.am/>
- * Copyright (C) 2005-2007 Ascent Team <http://www.ascentemu.com/>
- * Copyright (C) 2008-2013 ArcEmu Team <http://www.arcemu.org/>
+ * Copyright (c) 2011-2013 ArcPro Speculation <http://arcpro.sexyi.am/>
+ * Copyright (c) 2005-2007 Ascent Team <http://www.ascentemu.com/>
+ * Copyright (c) 2008-2013 ArcEmu Team <http://www.arcemu.org/>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -143,7 +143,7 @@ class AlteracValley : public CBattleground
 		list<GameObject*> m_gates;
 		uint32 m_reinforcements[2];
 		bool m_nearingVictory[2];
-		ARCEMU_INLINE map<Creature*, set<uint32> > Get_m_resurrectMap() { return CBattleground::m_resurrectMap; }
+		ARCPRO_INLINE map<Creature*, set<uint32> > Get_m_resurrectMap(); { return CBattleground::m_resurrectMap; }
 	public:
 		AlteracValley(MapMgr* mgr, uint32 id, uint32 lgroup, uint32 t);
 		~AlteracValley();

@@ -1,8 +1,8 @@
 /*
  * ArcPro MMORPG Server
- * Copyright (C) 2011-2013 ArcPro Speculation <http://arcpro.sexyi.am/>
- * Copyright (C) 2008-2013 ArcEmu Team <http://www.arcemu.org/>
- * Copyright (C) 2008 WEmu Team
+ * Copyright (c) 2011-2013 ArcPro Speculation <http://arcpro.sexyi.am/>
+ * Copyright (c) 2008-2013 ArcEmu Team <http://www.arcemu.org/>
+ * Copyright (c) 2008 WEmu Team
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -1060,6 +1060,7 @@ bool RuneOfDistortion(uint32 i, Spell* pSpell)
 
 	if(!plr->HasQuest(13312) && !plr->HasQuest(13337))
 		return true;
+	return true;
 }
 
 bool GoreBladder(uint32 i, Spell* pSpell)
@@ -1492,7 +1493,7 @@ bool ArcaneDisruption(uint32 i, Aura* pAura, bool apply)
 			if(cp && ci)
 			{
 				c = plr->GetMapMgr()->CreateCreature(26528);
-				if(C)
+				if(c)
 				{
 					//position is guessed
 					c->Load(cp, 1759.4351f, 1265.3317f, 138.052f, 0.1902f);

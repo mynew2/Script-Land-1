@@ -1,9 +1,9 @@
 /*
  * ArcPro MMORPG Server
- * Copyright (C) 2011-2013 ArcPro Speculation <http://arcpro.sexyi.am/>
- * Copyright (C) 2006-2008 U2 Team <http://www.undzwei.eu/>
- * Copyright (C) 2007-2008 Yelly Team
- * Copyright (C) 2009 WhyScripts Team <http://www.whydb.org/>
+ * Copyright (c) 2011-2013 ArcPro Speculation <http://arcpro.sexyi.am/>
+ * Copyright (c) 2006-2008 U2 Team <http://www.undzwei.eu/>
+ * Copyright (c) 2007-2008 Yelly Team
+ * Copyright (c) 2009 WhyScripts Team <http://www.whydb.org/>
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -214,7 +214,7 @@ class highlord_demitrianGossip : public GossipScript
 		 void GossipHello(Object* pObject, Player* pPlayer)
 		{
 			//Send quests and gossip menu.
-			Arcemu::Gossip::Menu menu(pObject->GetGUID(), 6812, pPlayer->GetSession()->language);
+			Arcpro::Gossip::Menu menu(pObject->GetGUID(), 6812, pPlayer->GetSession()->language);
 			sQuestMgr.FillQuestMenu(TO_CREATURE(pObject), pPlayer, menu);
 			if (pPlayer->HasItemCount(18563, 1, false) && pPlayer->HasItemCount(18564, 1, false))
 			{
@@ -228,7 +228,7 @@ class highlord_demitrianGossip : public GossipScript
 
 		void GossipHello1(Object* pObject, Player* pPlayer)
 		{
-			Arcemu::Gossip::Menu menu(pObject->GetGUID(), 6842, pPlayer->GetSession()->language);
+			Arcpro::Gossip::Menu menu(pObject->GetGUID(), 6842, pPlayer->GetSession()->language);
 
 			menu.AddItem(0, GOSSIP2, 2);
 			menu.Send(pPlayer);
@@ -236,7 +236,7 @@ class highlord_demitrianGossip : public GossipScript
 
 		void GossipHello2(Object* pObject, Player* pPlayer)
 		{
-			Arcemu::Gossip::Menu menu(pObject->GetGUID(), 6843, pPlayer->GetSession()->language);
+			Arcpro::Gossip::Menu menu(pObject->GetGUID(), 6843, pPlayer->GetSession()->language);
 
 			menu.AddItem(0, GOSSIP3, 3);
 			menu.Send(pPlayer);
@@ -244,7 +244,7 @@ class highlord_demitrianGossip : public GossipScript
 
 		void GossipHello3(Object* pObject, Player* pPlayer)
 		{
-			Arcemu::Gossip::Menu menu(pObject->GetGUID(), 6844, pPlayer->GetSession()->language);
+			Arcpro::Gossip::Menu menu(pObject->GetGUID(), 6844, pPlayer->GetSession()->language);
 
 			menu.AddItem(0, GOSSIP4, 4);
 			menu.Send(pPlayer);
@@ -252,7 +252,7 @@ class highlord_demitrianGossip : public GossipScript
 
 		void GossipHello4(Object* pObject, Player* pPlayer)
 		{
-			Arcemu::Gossip::Menu menu(pObject->GetGUID(), 6867, pPlayer->GetSession()->language);
+			Arcpro::Gossip::Menu menu(pObject->GetGUID(), 6867, pPlayer->GetSession()->language);
 
 			menu.AddItem(0, GOSSIP5, 5);
 			menu.Send(pPlayer);
@@ -261,7 +261,7 @@ class highlord_demitrianGossip : public GossipScript
 
 		void GossipHello5(Object* pObject, Player* pPlayer)
 		{
-			Arcemu::Gossip::Menu menu(pObject->GetGUID(), 6868, pPlayer->GetSession()->language);
+			Arcpro::Gossip::Menu menu(pObject->GetGUID(), 6868, pPlayer->GetSession()->language);
 
 			menu.AddItem(0, GOSSIP6, 6);
 			menu.Send(pPlayer);
@@ -269,7 +269,7 @@ class highlord_demitrianGossip : public GossipScript
 
 		void GossipHello6(Object* pObject, Player* pPlayer)
 		{
-			Arcemu::Gossip::Menu menu(pObject->GetGUID(), 6869, pPlayer->GetSession()->language);
+			Arcpro::Gossip::Menu menu(pObject->GetGUID(), 6869, pPlayer->GetSession()->language);
 
 			menu.AddItem(0, GOSSIP7, 7);
 			menu.Send(pPlayer);
@@ -310,7 +310,7 @@ class Thunderan : public QuestScript
 	public:
 		void OnQuestComplete(Player* mTarget, QuestLogEntry* qLogEntry)
 		{
-			sEAS.SpawnCreature(mTarget, 14435, -6241, 1715, 4.8, 0.605017,0, 1);
+			sEAS.SpawnCreature(mTarget, 14435, -6241.0f, 1715.0f, 4.8f, 0.605017f,0, 1);
 		}
 };
 

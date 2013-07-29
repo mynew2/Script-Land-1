@@ -1,8 +1,8 @@
 /*
  * ArcPro MMORPG Server
- * Copyright (C) 2011-2013 ArcPro Speculation <http://arcpro.sexyi.am/>
- * Copyright (C) 2005-2007 Ascent Team <http://www.ascentemu.com/>
- * Copyright (C) 2008-2013 ArcEmu Team <http://www.arcemu.org/>
+ * Copyright (c) 2011-2013 ArcPro Speculation <http://arcpro.sexyi.am/>
+ * Copyright (c) 2005-2007 Ascent Team <http://www.ascentemu.com/>
+ * Copyright (c) 2008-2013 ArcEmu Team <http://www.arcemu.org/>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -25,7 +25,7 @@ class ArmyOfTheDeadGhoulAI : public CreatureAIScript
 {
 	public:
 		ADD_CREATURE_FACTORY_FUNCTION(ArmyOfTheDeadGhoulAI);
-		ArmyOfTheDeadGhoulAI(Creature* c) : CreatureAIScript(C)
+		ArmyOfTheDeadGhoulAI(Creature* c) : CreatureAIScript(c)
 		{
 			_unit->GetAIInterface()->m_canMove = false;
 		}
@@ -61,7 +61,7 @@ class ShadowFiendAI : public CreatureAIScript
 {
 	public:
 		ADD_CREATURE_FACTORY_FUNCTION(ShadowFiendAI);
-		ShadowFiendAI(Creature* c) : CreatureAIScript(C)
+		ShadowFiendAI(Creature* c) : CreatureAIScript(c)
 		{
 		}
 
@@ -99,7 +99,7 @@ class MirrorImageAI : public CreatureAIScript
 {
 	public:
 		ADD_CREATURE_FACTORY_FUNCTION(MirrorImageAI);
-		MirrorImageAI(Creature* c) : CreatureAIScript(C)
+		MirrorImageAI(Creature* c) : CreatureAIScript(c)
 		{
 		}
 
