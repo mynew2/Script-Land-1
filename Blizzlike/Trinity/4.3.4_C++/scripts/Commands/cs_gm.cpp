@@ -36,7 +36,7 @@ class gm_commandscript : public CommandScript
 public:
     gm_commandscript() : CommandScript("gm_commandscript") { }
 
-    ChatCommand* GetCommands() const
+    ChatCommand* GetCommands() const OVERRIDE
     {
         static ChatCommand gmCommandTable[] =
         {
@@ -103,15 +103,9 @@ public:
 
         WorldPacket data;
         if (strncmp(args, "on", 3) == 0)
-        {
-            target->AddUnitMovementFlag(MOVEMENTFLAG_CAN_FLY);
-            target->SendMovementCanFlyChange();
-        }
+            target->SetCanFly(true);
         else if (strncmp(args, "off", 4) == 0)
-        {
-            target->RemoveUnitMovementFlag(MOVEMENTFLAG_CAN_FLY);
-            target->SendMovementCanFlyChange();
-        }
+            target->SetCanFly(false);
         else
         {
             handler->SendSysMessage(LANG_USE_BOL);

@@ -928,6 +928,9 @@ void WorldSession::BuildPartyMemberStatsChangedPacket(Player* player, WorldPacke
     if (mask == GROUP_UPDATE_FLAG_NONE)
         return;
 
+    std::set<uint32> phases;
+    player->GetPhaseMgr().GetActivePhases(phases);
+
     if (mask & GROUP_UPDATE_FLAG_POWER_TYPE)                // if update power type, update current/max power also
         mask |= (GROUP_UPDATE_FLAG_CUR_POWER | GROUP_UPDATE_FLAG_MAX_POWER);
 
@@ -1144,20 +1147,21 @@ void WorldSession::BuildPartyMemberStatsChangedPacket(Player* player, WorldPacke
         }
     }
 
-    if (mask & GROUP_UPDATE_FLAG_PHASE)
-    {
-        *data << uint32(8); // either 0 or 8, same unk found in SMSG_PHASESHIFT
-        *data << uint32(0); // count
-        // for (count) *data << uint16(phaseId)
-    }
-
     if (mask & GROUP_UPDATE_FLAG_VEHICLE_SEAT)
     {
         if (Vehicle* veh = player->GetVehicle())
-            *data << uint32(veh->GetVehicleInfo()->m_seatID[player->m_movementInfo.t_seat]);
+            *data << uint32(veh->GetVehicleInfo()->m_seatID[player->m_movementInfo.transport.seat]);
         else
             *data << uint32(0);
 
+    }
+
+    if (mask & GROUP_UPDATE_FLAG_PHASE)
+    {
+        *data << uint32(phases.empty() ? 8 : 0);
+        *data << uint32(phases.size());
+        for (std::set<uint32>::const_iterator itr = phases.begin(); itr != phases.end(); ++itr)
+            *data << uint16(*itr);
     }
 }
 
@@ -1182,6 +1186,8 @@ void WorldSession::HandleRequestPartyMemberStatsOpcode(WorldPacket& recvData)
 
     Pet* pet = player->GetPet();
     Powers powerType = player->getPowerType();
+    std::set<uint32> phases;
+    player->GetPhaseMgr().GetActivePhases(phases);
 
     WorldPacket data(SMSG_PARTY_MEMBER_STATS_FULL, 4+2+2+2+1+2*6+8+1+8);
     data << uint8(0);                                       // only for SMSG_PARTY_MEMBER_STATS_FULL, probably arena/bg related
@@ -1201,6 +1207,9 @@ void WorldSession::HandleRequestPartyMemberStatsOpcode(WorldPacket& recvData)
 
     if (player->GetVehicle())
         updateFlags |= GROUP_UPDATE_FLAG_VEHICLE_SEAT;
+
+    if (!phases.empty())
+        updateFlags |= GROUP_UPDATE_FLAG_PHASE;
 
     uint16 playerStatus = MEMBER_STATUS_ONLINE;
     if (player->IsPvP())
@@ -1266,6 +1275,7 @@ void WorldSession::HandleRequestPartyMemberStatsOpcode(WorldPacket& recvData)
             }
         }
     }
+
     data.put<uint64>(maskPos, auramask);                    // GROUP_UPDATE_FLAG_AURAS
 
     if (updateFlags & GROUP_UPDATE_FLAG_PET_GUID)
@@ -1289,23 +1299,19 @@ void WorldSession::HandleRequestPartyMemberStatsOpcode(WorldPacket& recvData)
     if (updateFlags & GROUP_UPDATE_FLAG_PET_MAX_POWER)
         data << uint16(pet->GetMaxPower(pet->getPowerType()));
 
+    // GROUP_UPDATE_FLAG_PET_AURAS
     uint64 petAuraMask = 0;
+    data << uint8(1);
     maskPos = data.wpos();
     data << uint64(petAuraMask);                            // placeholder
+    data << uint32(MAX_AURAS);                              // count
     if (pet)
     {
-        // GROUP_UPDATE_FLAG_PET_AURAS
-        data << uint8(1);
-        uint64 petauramask = 0;
-        size_t petMaskPos = data.wpos();
-        data << uint64(petauramask);                       // placeholder
-        data << uint32(MAX_AURAS);                         // count
-
         for (uint8 i = 0; i < MAX_AURAS; ++i)
         {
             if (AuraApplication const* aurApp = pet->GetVisibleAura(i))
             {
-                petauramask |= (uint64(1) << i);
+                petAuraMask |= (uint64(1) << i);
 
                 data << uint32(aurApp->GetBase()->GetId());
                 data << uint16(aurApp->GetFlags());
@@ -1322,20 +1328,20 @@ void WorldSession::HandleRequestPartyMemberStatsOpcode(WorldPacket& recvData)
                 }
             }
         }
-
-        data.put<uint64>(petMaskPos, petauramask);           // GROUP_UPDATE_FLAG_PET_AURAS
     }
-    // else not needed, flags do not include any PET_ update
-
-    // GROUP_UPDATE_FLAG_PHASE
-    data << uint32(8); // either 0 or 8, same unk found in SMSG_PHASESHIFT
-    data << uint32(0); // count
-    // for (count) *data << uint16(phaseId)
 
     data.put<uint64>(maskPos, petAuraMask);                 // GROUP_UPDATE_FLAG_PET_AURAS
 
     if (updateFlags & GROUP_UPDATE_FLAG_VEHICLE_SEAT)
-        data << uint32(player->GetVehicle()->GetVehicleInfo()->m_seatID[player->m_movementInfo.t_seat]);
+        data << uint32(player->GetVehicle()->GetVehicleInfo()->m_seatID[player->m_movementInfo.transport.seat]);
+
+    if (updateFlags & GROUP_UPDATE_FLAG_PHASE)
+    {
+        data << uint32(phases.empty() ? 8 : 0);
+        data << uint32(phases.size());
+        for (std::set<uint32>::const_iterator itr = phases.begin(); itr != phases.end(); ++itr)
+            data << uint16(*itr);
+    }
 
     SendPacket(&data);
 }

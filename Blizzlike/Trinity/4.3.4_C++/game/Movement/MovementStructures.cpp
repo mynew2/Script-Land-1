@@ -4525,6 +4525,216 @@ MovementStatusElements const SplineMoveUnsetHover[] =
     MSEEnd,
 };
 
+MovementStatusElements const SplineMoveStartSwim[] =
+{
+    MSEHasGuidByte1,
+    MSEHasGuidByte6,
+    MSEHasGuidByte0,
+    MSEHasGuidByte7,
+    MSEHasGuidByte3,
+    MSEHasGuidByte5,
+    MSEHasGuidByte2,
+    MSEHasGuidByte4,
+    MSEGuidByte3,
+    MSEGuidByte7,
+    MSEGuidByte2,
+    MSEGuidByte5,
+    MSEGuidByte6,
+    MSEGuidByte4,
+    MSEGuidByte1,
+    MSEGuidByte0,
+    MSEEnd,
+};
+
+MovementStatusElements const SplineMoveStopSwim[] =
+{
+    MSEHasGuidByte4,
+    MSEHasGuidByte1,
+    MSEHasGuidByte5,
+    MSEHasGuidByte3,
+    MSEHasGuidByte0,
+    MSEHasGuidByte7,
+    MSEHasGuidByte2,
+    MSEHasGuidByte6,
+    MSEGuidByte6,
+    MSEGuidByte0,
+    MSEGuidByte7,
+    MSEGuidByte2,
+    MSEGuidByte3,
+    MSEGuidByte1,
+    MSEGuidByte5,
+    MSEGuidByte4,
+    MSEEnd,
+};
+
+MovementStatusElements const SplineMoveSetFlying[] =
+{
+    MSEHasGuidByte0,
+    MSEHasGuidByte4,
+    MSEHasGuidByte1,
+    MSEHasGuidByte6,
+    MSEHasGuidByte7,
+    MSEHasGuidByte2,
+    MSEHasGuidByte3,
+    MSEHasGuidByte5,
+    MSEGuidByte7,
+    MSEGuidByte0,
+    MSEGuidByte5,
+    MSEGuidByte6,
+    MSEGuidByte4,
+    MSEGuidByte1,
+    MSEGuidByte3,
+    MSEGuidByte2,
+    MSEEnd,
+};
+
+MovementStatusElements const SplineMoveUnsetFlying[] =
+{
+    MSEHasGuidByte5,
+    MSEHasGuidByte0,
+    MSEHasGuidByte4,
+    MSEHasGuidByte7,
+    MSEHasGuidByte2,
+    MSEHasGuidByte3,
+    MSEHasGuidByte1,
+    MSEHasGuidByte6,
+    MSEGuidByte7,
+    MSEGuidByte2,
+    MSEGuidByte3,
+    MSEGuidByte4,
+    MSEGuidByte5,
+    MSEGuidByte1,
+    MSEGuidByte6,
+    MSEGuidByte0,
+    MSEEnd,
+};
+
+MovementStatusElements const SplineMoveSetWaterWalk[] =
+{
+    MSEHasGuidByte6,
+    MSEHasGuidByte1,
+    MSEHasGuidByte4,
+    MSEHasGuidByte2,
+    MSEHasGuidByte3,
+    MSEHasGuidByte7,
+    MSEHasGuidByte5,
+    MSEHasGuidByte0,
+    MSEGuidByte0,
+    MSEGuidByte6,
+    MSEGuidByte3,
+    MSEGuidByte7,
+    MSEGuidByte4,
+    MSEGuidByte2,
+    MSEGuidByte5,
+    MSEGuidByte1,
+    MSEEnd,
+};
+
+MovementStatusElements const SplineMoveSetLandWalk[] =
+{
+    MSEHasGuidByte5,
+    MSEHasGuidByte0,
+    MSEHasGuidByte4,
+    MSEHasGuidByte6,
+    MSEHasGuidByte7,
+    MSEHasGuidByte2,
+    MSEHasGuidByte3,
+    MSEHasGuidByte1,
+    MSEGuidByte5,
+    MSEGuidByte7,
+    MSEGuidByte3,
+    MSEGuidByte4,
+    MSEGuidByte1,
+    MSEGuidByte2,
+    MSEGuidByte0,
+    MSEGuidByte6,
+    MSEEnd,
+};
+
+MovementStatusElements const SplineMoveSetFeatherFall[] =
+{
+    MSEHasGuidByte3,
+    MSEHasGuidByte2,
+    MSEHasGuidByte7,
+    MSEHasGuidByte5,
+    MSEHasGuidByte4,
+    MSEHasGuidByte6,
+    MSEHasGuidByte1,
+    MSEHasGuidByte0,
+    MSEGuidByte1,
+    MSEGuidByte4,
+    MSEGuidByte7,
+    MSEGuidByte6,
+    MSEGuidByte2,
+    MSEGuidByte0,
+    MSEGuidByte5,
+    MSEGuidByte3,
+    MSEEnd,
+};
+
+MovementStatusElements const SplineMoveSetNormalFall[] =
+{
+    MSEHasGuidByte3,
+    MSEHasGuidByte5,
+    MSEHasGuidByte1,
+    MSEHasGuidByte0,
+    MSEHasGuidByte7,
+    MSEHasGuidByte6,
+    MSEHasGuidByte2,
+    MSEHasGuidByte4,
+    MSEGuidByte7,
+    MSEGuidByte6,
+    MSEGuidByte2,
+    MSEGuidByte0,
+    MSEGuidByte5,
+    MSEGuidByte4,
+    MSEGuidByte3,
+    MSEGuidByte1,
+    MSEEnd,
+};
+
+MovementStatusElements const SplineMoveRoot[] =
+{
+    MSEHasGuidByte5,
+    MSEHasGuidByte4,
+    MSEHasGuidByte6,
+    MSEHasGuidByte1,
+    MSEHasGuidByte3,
+    MSEHasGuidByte7,
+    MSEHasGuidByte2,
+    MSEHasGuidByte0,
+    MSEGuidByte2,
+    MSEGuidByte1,
+    MSEGuidByte7,
+    MSEGuidByte3,
+    MSEGuidByte5,
+    MSEGuidByte0,
+    MSEGuidByte6,
+    MSEGuidByte4,
+    MSEEnd,
+};
+
+MovementStatusElements const SplineMoveUnroot[] =
+{
+    MSEHasGuidByte0,
+    MSEHasGuidByte1,
+    MSEHasGuidByte6,
+    MSEHasGuidByte5,
+    MSEHasGuidByte3,
+    MSEHasGuidByte2,
+    MSEHasGuidByte7,
+    MSEHasGuidByte4,
+    MSEGuidByte6,
+    MSEGuidByte3,
+    MSEGuidByte1,
+    MSEGuidByte5,
+    MSEGuidByte2,
+    MSEGuidByte0,
+    MSEGuidByte7,
+    MSEGuidByte4,
+    MSEEnd,
+};
+
 MovementStatusElements const MoveSetCanFly[] =
 {
     MSEHasGuidByte1,
@@ -4698,6 +4908,50 @@ MovementStatusElements const MoveNormalFall[] =
     MSEGuidByte0,
     MSEGuidByte3,
     MSEGuidByte6,
+    MSEEnd,
+};
+
+MovementStatusElements const MoveRoot[] =
+{
+    MSEHasGuidByte2,
+    MSEHasGuidByte7,
+    MSEHasGuidByte6,
+    MSEHasGuidByte0,
+    MSEHasGuidByte5,
+    MSEHasGuidByte4,
+    MSEHasGuidByte1,
+    MSEHasGuidByte3,
+    MSEGuidByte1,
+    MSEGuidByte0,
+    MSEGuidByte2,
+    MSEGuidByte5,
+    MSECounter,
+    MSEGuidByte3,
+    MSEGuidByte4,
+    MSEGuidByte7,
+    MSEGuidByte6,
+    MSEEnd,
+};
+
+MovementStatusElements const MoveUnroot[] =
+{
+    MSEHasGuidByte0,
+    MSEHasGuidByte1,
+    MSEHasGuidByte3,
+    MSEHasGuidByte7,
+    MSEHasGuidByte5,
+    MSEHasGuidByte2,
+    MSEHasGuidByte4,
+    MSEHasGuidByte6,
+    MSEGuidByte3,
+    MSEGuidByte6,
+    MSEGuidByte1,
+    MSECounter,
+    MSEGuidByte2,
+    MSEGuidByte0,
+    MSEGuidByte7,
+    MSEGuidByte4,
+    MSEGuidByte5,
     MSEEnd,
 };
 
@@ -5149,6 +5403,26 @@ MovementStatusElements const* GetMovementStatusElementsSequence(Opcodes opcode)
             return SplineMoveSetHover;
         case SMSG_SPLINE_MOVE_UNSET_HOVER:
             return SplineMoveUnsetHover;
+        case SMSG_SPLINE_MOVE_START_SWIM:
+            return SplineMoveStartSwim;
+        case SMSG_SPLINE_MOVE_STOP_SWIM:
+            return SplineMoveStopSwim;
+        case SMSG_SPLINE_MOVE_SET_FLYING:
+            return SplineMoveSetFlying;
+        case SMSG_SPLINE_MOVE_UNSET_FLYING:
+            return SplineMoveUnsetFlying;
+        case SMSG_SPLINE_MOVE_SET_WATER_WALK:
+            return SplineMoveSetWaterWalk;
+        case SMSG_SPLINE_MOVE_SET_LAND_WALK:
+            return SplineMoveSetLandWalk;
+        case SMSG_SPLINE_MOVE_SET_FEATHER_FALL:
+            return SplineMoveSetFeatherFall;
+        case SMSG_SPLINE_MOVE_SET_NORMAL_FALL:
+            return SplineMoveSetNormalFall;
+        case SMSG_SPLINE_MOVE_ROOT:
+            return SplineMoveRoot;
+        case SMSG_SPLINE_MOVE_UNROOT:
+            return SplineMoveUnroot;
         case SMSG_MOVE_SET_CAN_FLY:
             return MoveSetCanFly;
         case SMSG_MOVE_UNSET_CAN_FLY:
@@ -5165,6 +5439,10 @@ MovementStatusElements const* GetMovementStatusElementsSequence(Opcodes opcode)
             return MoveFeatherFall;
         case SMSG_MOVE_NORMAL_FALL:
             return MoveNormalFall;
+        case SMSG_MOVE_ROOT:
+            return MoveRoot;
+        case SMSG_MOVE_UNROOT:
+            return MoveUnroot;
         case CMSG_CHANGE_SEATS_ON_CONTROLLED_VEHICLE:
             return ChangeSeatsOnControlledVehicle;
         case CMSG_CAST_SPELL:
