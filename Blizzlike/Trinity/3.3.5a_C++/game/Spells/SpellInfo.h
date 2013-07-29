@@ -198,7 +198,7 @@ class SpellImplicitTargetInfo
 private:
     Targets _target;
 public:
-    SpellImplicitTargetInfo() {}
+    SpellImplicitTargetInfo() : _target(Targets(0)) { }
     SpellImplicitTargetInfo(uint32 target);
 
     bool IsArea() const;
@@ -413,7 +413,6 @@ public:
     bool CanDispelAura(SpellInfo const* aura) const;
 
     bool IsSingleTarget() const;
-    bool IsSingleTargetWith(SpellInfo const* spellInfo) const;
     bool IsAuraExclusiveBySpecificWith(SpellInfo const* spellInfo) const;
     bool IsAuraExclusiveBySpecificPerCasterWith(SpellInfo const* spellInfo) const;
 

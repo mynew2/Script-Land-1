@@ -1431,7 +1431,7 @@ class Player : public Unit, public GridObject<Player>
         void SendQuestTimerFailed(uint32 quest_id);
         void SendCanTakeQuestResponse(uint32 msg) const;
         void SendQuestConfirmAccept(Quest const* quest, Player* pReceiver);
-        void SendPushToPartyResponse(Player* player, uint32 msg);
+        void SendPushToPartyResponse(Player* player, uint8 msg);
         void SendQuestUpdateAddItem(Quest const* quest, uint32 item_idx, uint16 count);
         void SendQuestUpdateAddCreatureOrGo(Quest const* quest, uint64 guid, uint32 creatureOrGO_idx, uint16 old_count, uint16 add_count);
         void SendQuestUpdateAddPlayer(Quest const* quest, uint16 old_count, uint16 add_count);
@@ -2280,14 +2280,11 @@ class Player : public Unit, public GridObject<Player>
         bool IsInWhisperWhiteList(uint64 guid);
         void RemoveFromWhisperWhiteList(uint64 guid) { WhisperList.remove(guid); }
 
-        /*! These methods send different packets to the client in apply and unapply case.
-            These methods are only sent to the current unit.
-        */
-        void SendMovementSetCanFly(bool apply);
-        void SendMovementSetCanTransitionBetweenSwimAndFly(bool apply);
-        void SendMovementSetHover(bool apply);
-        void SendMovementSetWaterWalking(bool apply);
-        void SendMovementSetFeatherFall(bool apply);
+        bool SetDisableGravity(bool disable, bool packetOnly /* = false */);
+        bool SetCanFly(bool apply);
+        bool SetWaterWalking(bool apply, bool packetOnly = false);
+        bool SetFeatherFall(bool apply, bool packetOnly = false);
+        bool SetHover(bool enable, bool packetOnly = false);
 
         bool CanFly() const { return m_movementInfo.HasMovementFlag(MOVEMENTFLAG_CAN_FLY); }
 

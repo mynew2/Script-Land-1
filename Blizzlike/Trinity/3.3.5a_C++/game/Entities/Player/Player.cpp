@@ -24,15 +24,14 @@
 #include "Battlefield.h"
 #include "BattlefieldMgr.h"
 #include "BattlefieldWG.h"
-#include "BattlegroundAV.h"
 #include "Battleground.h"
+#include "BattlegroundAV.h"
 #include "BattlegroundMgr.h"
 #include "CellImpl.h"
 #include "Channel.h"
 #include "ChannelMgr.h"
 #include "CharacterDatabaseCleaner.h"
 #include "Chat.h"
-#include <cmath>
 #include "Common.h"
 #include "ConditionMgr.h"
 #include "CreatureAI.h"
@@ -49,8 +48,8 @@
 #include "GuildMgr.h"
 #include "InstanceSaveMgr.h"
 #include "InstanceScript.h"
-#include "Language.h"
 #include "LFGMgr.h"
+#include "Language.h"
 #include "Log.h"
 #include "MapInstanced.h"
 #include "MapManager.h"
@@ -59,17 +58,18 @@
 #include "Opcodes.h"
 #include "OutdoorPvP.h"
 #include "OutdoorPvPMgr.h"
-#include "ReputationMgr.h"
 #include "Pet.h"
 #include "QuestDef.h"
+#include "ReputationMgr.h"
 #include "SkillDiscovery.h"
 #include "SocialMgr.h"
+#include "Spell.h"
 #include "SpellAuraEffects.h"
 #include "SpellAuras.h"
-#include "Spell.h"
 #include "SpellMgr.h"
 #include "Transport.h"
 #include "UpdateData.h"
+#include "UpdateFieldFlags.h"
 #include "UpdateMask.h"
 #include "Util.h"
 #include "Vehicle.h"
@@ -2115,7 +2115,7 @@ bool Player::TeleportTo(uint32 mapid, float x, float y, float z, float orientati
         {
             m_transport->RemovePassenger(this);
             m_transport = NULL;
-            m_movementInfo.ClearTransport();
+            m_movementInfo.transport.Reset();
             RepopAtGraveyard();                             // teleport to near graveyard if on transport, looks blizz like :)
         }
 
@@ -2130,7 +2130,7 @@ bool Player::TeleportTo(uint32 mapid, float x, float y, float z, float orientati
         ExitVehicle();
 
     // reset movement flags at teleport, because player will continue move with these flags after teleport
-    SetUnitMovementFlags(0);
+    SetUnitMovementFlags(GetUnitMovementFlags() & MOVEMENTFLAG_MASK_HAS_PLAYER_STATUS_OPCODE);
     DisableSpline();
 
     if (m_transport)
@@ -2141,7 +2141,7 @@ bool Player::TeleportTo(uint32 mapid, float x, float y, float z, float orientati
         {
             m_transport->RemovePassenger(this);
             m_transport = NULL;
-            m_movementInfo.ClearTransport();
+            m_movementInfo.transport.Reset();
         }
     }
 
@@ -2294,10 +2294,10 @@ bool Player::TeleportTo(uint32 mapid, float x, float y, float z, float orientati
 
             if (m_transport)
             {
-                final_x += m_movementInfo.t_pos.GetPositionX();
-                final_y += m_movementInfo.t_pos.GetPositionY();
-                final_z += m_movementInfo.t_pos.GetPositionZ();
-                final_o += m_movementInfo.t_pos.GetOrientation();
+                final_x += m_movementInfo.transport.pos.GetPositionX();
+                final_y += m_movementInfo.transport.pos.GetPositionY();
+                final_z += m_movementInfo.transport.pos.GetPositionZ();
+                final_o += m_movementInfo.transport.pos.GetOrientation();
             }
 
             m_teleport_dest = WorldLocation(mapid, final_x, final_y, final_z, final_o);
@@ -2310,7 +2310,7 @@ bool Player::TeleportTo(uint32 mapid, float x, float y, float z, float orientati
                 WorldPacket data(SMSG_NEW_WORLD, 4 + 4 + 4 + 4 + 4);
                 data << uint32(mapid);
                 if (m_transport)
-                    data << m_movementInfo.t_pos.PositionXYZOStream();
+                    data << m_movementInfo.transport.pos.PositionXYZOStream();
                 else
                     data << m_teleport_dest.PositionXYZOStream();
 
@@ -14362,7 +14362,7 @@ void Player::PrepareGossipMenu(WorldObject* source, uint32 menuId /*= 0*/, bool 
                     VendorItemData const* vendorItems = creature->GetVendorItems();
                     if (!vendorItems || vendorItems->Empty())
                     {
-                        TC_LOG_ERROR(LOG_FILTER_SQL, "Creature (GUID: %u, Entry: %u) have UNIT_NPC_FLAG_VENDOR but have empty trading item list.", creature->GetGUIDLow(), creature->GetEntry());
+                        TC_LOG_ERROR(LOG_FILTER_SQL, "Creature %s (Entry: %u GUID: %u DB GUID: %u) has UNIT_NPC_FLAG_VENDOR set but has an empty trading item list.", creature->GetName().c_str(), creature->GetEntry(), creature->GetGUIDLow(), creature->GetDBTableGUIDLow());
                         canTalk = false;
                     }
                     break;
@@ -16653,11 +16653,11 @@ void Player::SendQuestConfirmAccept(const Quest* quest, Player* pReceiver)
     }
 }
 
-void Player::SendPushToPartyResponse(Player* player, uint32 msg)
+void Player::SendPushToPartyResponse(Player* player, uint8 msg)
 {
     if (player)
     {
-        WorldPacket data(MSG_QUEST_PUSH_RESULT, (8+1));
+        WorldPacket data(MSG_QUEST_PUSH_RESULT, 8 + 1);
         data << uint64(player->GetGUID());
         data << uint8(msg);                                 // valid values: 0-8
         GetSession()->SendPacket(&data);
@@ -17145,18 +17145,18 @@ bool Player::LoadFromDB(uint32 guid, SQLQueryHolder *holder)
     // currently we do not support transport in bg
     else if (transGUID)
     {
-        m_movementInfo.t_guid = MAKE_NEW_GUID(transGUID, 0, HIGHGUID_MO_TRANSPORT);
-        m_movementInfo.t_pos.Relocate(fields[26].GetFloat(), fields[27].GetFloat(), fields[28].GetFloat(), fields[29].GetFloat());
+        m_movementInfo.transport.guid = MAKE_NEW_GUID(transGUID, 0, HIGHGUID_MO_TRANSPORT);
+        m_movementInfo.transport.pos.Relocate(fields[26].GetFloat(), fields[27].GetFloat(), fields[28].GetFloat(), fields[29].GetFloat());
 
         if (!Trinity::IsValidMapCoord(
-            GetPositionX()+m_movementInfo.t_pos.m_positionX, GetPositionY()+m_movementInfo.t_pos.m_positionY,
-            GetPositionZ()+m_movementInfo.t_pos.m_positionZ, GetOrientation()+m_movementInfo.t_pos.m_orientation) ||
+            GetPositionX()+m_movementInfo.transport.pos.m_positionX, GetPositionY()+m_movementInfo.transport.pos.m_positionY,
+            GetPositionZ()+m_movementInfo.transport.pos.m_positionZ, GetOrientation()+m_movementInfo.transport.pos.m_orientation) ||
             // transport size limited
-            m_movementInfo.t_pos.m_positionX > 250 || m_movementInfo.t_pos.m_positionY > 250 || m_movementInfo.t_pos.m_positionZ > 250)
+            m_movementInfo.transport.pos.m_positionX > 250 || m_movementInfo.transport.pos.m_positionY > 250 || m_movementInfo.transport.pos.m_positionZ > 250)
         {
             TC_LOG_ERROR(LOG_FILTER_PLAYER, "Player (guidlow %d) have invalid transport coordinates (X: %f Y: %f Z: %f O: %f). Teleport to bind location.",
-                guid, GetPositionX()+m_movementInfo.t_pos.m_positionX, GetPositionY()+m_movementInfo.t_pos.m_positionY,
-                GetPositionZ()+m_movementInfo.t_pos.m_positionZ, GetOrientation()+m_movementInfo.t_pos.m_orientation);
+                guid, GetPositionX()+m_movementInfo.transport.pos.m_positionX, GetPositionY()+m_movementInfo.transport.pos.m_positionY,
+                GetPositionZ()+m_movementInfo.transport.pos.m_positionZ, GetOrientation()+m_movementInfo.transport.pos.m_orientation);
 
             RelocateToHomebind();
         }
@@ -18787,7 +18787,7 @@ bool Player::Satisfy(AccessRequirement const* ar, uint32 target_map, bool report
 
 bool Player::CheckInstanceLoginValid()
 {
-    if (!GetMap())
+    if (!FindMap())
         return false;
 
     if (!GetMap()->IsDungeon() || IsGameMaster())
@@ -22106,10 +22106,10 @@ bool Player::IsAlwaysDetectableFor(WorldObject const* seer) const
 
     if (const Player* seerPlayer = seer->ToPlayer())
         if (IsGroupVisibleFor(seerPlayer))
-            return true;
+            return !(seerPlayer->duel && seerPlayer->duel->startTime != 0 && seerPlayer->duel->opponent == this);
 
-     return false;
- }
+    return false;
+}
 
 bool Player::IsVisibleGloballyFor(Player const* u) const
 {
@@ -22229,13 +22229,29 @@ void Player::UpdateTriggerVisibility()
     {
         if (IS_CREATURE_GUID(*itr))
         {
-            Creature* obj = GetMap()->GetCreature(*itr);
-            if (!obj || !(obj->IsTrigger() || obj->HasAuraType(SPELL_AURA_TRANSFORM)))  // can transform into triggers
+            Creature* creature = GetMap()->GetCreature(*itr);
+            // Update fields of triggers, transformed units or unselectable units (values dependent on GM state)
+            if (!creature || (!creature->IsTrigger() && !creature->HasAuraType(SPELL_AURA_TRANSFORM) && !creature->HasFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NOT_SELECTABLE)))
                 continue;
 
-            obj->BuildValuesUpdateBlockForPlayer(&udata, this);
+            creature->SetFieldNotifyFlag(UF_FLAG_PUBLIC);
+            creature->BuildValuesUpdateBlockForPlayer(&udata, this);
+            creature->RemoveFieldNotifyFlag(UF_FLAG_PUBLIC);
+        }
+        else if (IS_GAMEOBJECT_GUID((*itr)))
+        {
+            GameObject* go = GetMap()->GetGameObject(*itr);
+            if (!go)
+                continue;
+
+            go->SetFieldNotifyFlag(UF_FLAG_PUBLIC);
+            go->BuildValuesUpdateBlockForPlayer(&udata, this);
+            go->RemoveFieldNotifyFlag(UF_FLAG_PUBLIC);
         }
     }
+
+    if (!udata.HasData())
+        return;
 
     udata.BuildPacket(&packet);
     GetSession()->SendPacket(&packet);
@@ -22709,8 +22725,8 @@ void Player::resetSpells(bool myClassOnly)
                 continue;
 
             // skip spells with first rank learned as talent (and all talents then also)
-            uint32 first_rank = sSpellMgr->GetFirstSpellInChain(spellInfo->Id);
-            if (GetTalentSpellCost(first_rank) > 0)
+            uint32 firstRank = spellInfo->GetFirstRankSpell()->Id;
+            if (GetTalentSpellCost(firstRank) > 0)
                 continue;
 
             // skip broken spells
@@ -22780,13 +22796,12 @@ void Player::learnQuestRewardedSpells(Quest const* quest)
     uint32 learned_0 = spellInfo->Effects[0].TriggerSpell;
     if (sSpellMgr->GetSpellRank(learned_0) > 1 && !HasSpell(learned_0))
     {
-        // not have first rank learned (unlearned prof?)
-        uint32 first_spell = sSpellMgr->GetFirstSpellInChain(learned_0);
-        if (!HasSpell(first_spell))
-            return;
-
         SpellInfo const* learnedInfo = sSpellMgr->GetSpellInfo(learned_0);
         if (!learnedInfo)
+            return;
+
+        // not have first rank learned (unlearned prof?)
+        if (!HasSpell(learnedInfo->GetFirstRankSpell()->Id))
             return;
 
         SpellsRequiringSpellMapBounds spellsRequired = sSpellMgr->GetSpellsRequiredForSpellBounds(learned_0);
@@ -22874,13 +22889,13 @@ void Player::SendAurasForTarget(Unit* target)
         These movement packets are usually found in SMSG_COMPRESSED_MOVES
     */
     if (target->HasAuraType(SPELL_AURA_FEATHER_FALL))
-        target->SendMovementFeatherFall();
+        target->SetFeatherFall(true, true);
 
     if (target->HasAuraType(SPELL_AURA_WATER_WALK))
-        target->SendMovementWaterWalking();
+        target->SetWaterWalking(true, true);
 
     if (target->HasAuraType(SPELL_AURA_HOVER))
-        target->SendMovementHover();
+        target->SetHover(true, true);
 
     WorldPacket data(SMSG_AURA_UPDATE_ALL);
     data.append(target->GetPackGUID());
@@ -26122,53 +26137,95 @@ void Player::_SaveInstanceTimeRestrictions(SQLTransaction& trans)
 bool Player::IsInWhisperWhiteList(uint64 guid)
 {
     for (WhisperListContainer::const_iterator itr = WhisperList.begin(); itr != WhisperList.end(); ++itr)
-    {
         if (*itr == guid)
             return true;
-    }
+
     return false;
 }
 
-void Player::SendMovementSetCanFly(bool apply)
+bool Player::SetDisableGravity(bool disable, bool packetOnly /*= false*/)
 {
+    if (!packetOnly && !Unit::SetDisableGravity(disable))
+        return false;
+
+    WorldPacket data(disable ? SMSG_MOVE_GRAVITY_DISABLE : SMSG_MOVE_GRAVITY_ENABLE, 12);
+    data.append(GetPackGUID());
+    data << uint32(0);          //! movement counter
+    SendDirectMessage(&data);
+
+    data.Initialize(MSG_MOVE_GRAVITY_CHNG, 64);
+    data.append(GetPackGUID());
+    BuildMovementPacket(&data);
+    SendMessageToSet(&data, false);
+    return true;
+}
+
+bool Player::SetCanFly(bool apply)
+{
+    if (!Unit::SetCanFly(apply))
+        return false;
+
     WorldPacket data(apply ? SMSG_MOVE_SET_CAN_FLY : SMSG_MOVE_UNSET_CAN_FLY, 12);
     data.append(GetPackGUID());
     data << uint32(0);          //! movement counter
     SendDirectMessage(&data);
-}
 
-void Player::SendMovementSetCanTransitionBetweenSwimAndFly(bool apply)
-{
-    WorldPacket data(apply ?
-        SMSG_MOVE_SET_CAN_TRANSITION_BETWEEN_SWIM_AND_FLY :
-        SMSG_MOVE_UNSET_CAN_TRANSITION_BETWEEN_SWIM_AND_FLY, 12);
+    data.Initialize(MSG_MOVE_UPDATE_CAN_FLY, 64);
     data.append(GetPackGUID());
-    data << uint32(0);          //! movement counter
-    SendDirectMessage(&data);
+    BuildMovementPacket(&data);
+    SendMessageToSet(&data, false);
+    return true;
 }
 
-void Player::SendMovementSetHover(bool apply)
+bool Player::SetHover(bool apply, bool packetOnly /*= false*/)
 {
+    if (!packetOnly && !Unit::SetHover(apply))
+        return false;
+
     WorldPacket data(apply ? SMSG_MOVE_SET_HOVER : SMSG_MOVE_UNSET_HOVER, 12);
     data.append(GetPackGUID());
     data << uint32(0);          //! movement counter
     SendDirectMessage(&data);
+
+    data.Initialize(MSG_MOVE_HOVER, 64);
+    data.append(GetPackGUID());
+    BuildMovementPacket(&data);
+    SendMessageToSet(&data, false);
+    return true;
 }
 
-void Player::SendMovementSetWaterWalking(bool apply)
+bool Player::SetWaterWalking(bool apply, bool packetOnly /*= false*/)
 {
+    if (!packetOnly && !Unit::SetWaterWalking(apply))
+        return false;
+
     WorldPacket data(apply ? SMSG_MOVE_WATER_WALK : SMSG_MOVE_LAND_WALK, 12);
     data.append(GetPackGUID());
     data << uint32(0);          //! movement counter
     SendDirectMessage(&data);
+
+    data.Initialize(MSG_MOVE_WATER_WALK, 64);
+    data.append(GetPackGUID());
+    BuildMovementPacket(&data);
+    SendMessageToSet(&data, false);
+    return true;
 }
 
-void Player::SendMovementSetFeatherFall(bool apply)
+bool Player::SetFeatherFall(bool apply, bool packetOnly /*= false*/)
 {
+    if (!packetOnly && !Unit::SetFeatherFall(apply))
+        return false;
+
     WorldPacket data(apply ? SMSG_MOVE_FEATHER_FALL : SMSG_MOVE_NORMAL_FALL, 12);
     data.append(GetPackGUID());
     data << uint32(0);          //! movement counter
     SendDirectMessage(&data);
+
+    data.Initialize(MSG_MOVE_FEATHER_FALL, 64);
+    data.append(GetPackGUID());
+    BuildMovementPacket(&data);
+    SendMessageToSet(&data, false);
+    return true;
 }
 
 float Player::GetCollisionHeight(bool mounted) const

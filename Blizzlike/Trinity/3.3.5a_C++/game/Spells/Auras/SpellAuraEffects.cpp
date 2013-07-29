@@ -2558,24 +2558,10 @@ void AuraEffect::HandleAuraAllowFlight(AuraApplication const* aurApp, uint8 mode
             return;
     }
 
-    //! Not entirely sure if this should be sent for creatures as well, but I don't think so.
     target->SetCanFly(apply);
-    if (!apply)
-    {
-        target->RemoveUnitMovementFlag(MOVEMENTFLAG_MASK_MOVING_FLY);
+
+    if (!apply && target->GetTypeId() == TYPEID_UNIT && !target->IsLevitating())
         target->GetMotionMaster()->MoveFall();
-        target->m_movementInfo.SetFallTime(0);
-    }
-
-    Player* player = target->ToPlayer();
-    if (!player)
-        player = target->m_movedPlayer;
-
-    if (player)
-        player->SendMovementCanFlyChange();
-
-    //! We still need to initiate a server-side MoveFall here,
-    //! which requires MSG_MOVE_FALL_LAND on landing.
 }
 
 void AuraEffect::HandleAuraWaterWalk(AuraApplication const* aurApp, uint8 mode, bool apply) const
@@ -2592,12 +2578,7 @@ void AuraEffect::HandleAuraWaterWalk(AuraApplication const* aurApp, uint8 mode, 
             return;
     }
 
-    if (apply)
-        target->AddUnitMovementFlag(MOVEMENTFLAG_WATERWALKING);
-    else
-        target->RemoveUnitMovementFlag(MOVEMENTFLAG_WATERWALKING);
-
-    target->SendMovementWaterWalking();
+    target->SetWaterWalking(apply);
 }
 
 void AuraEffect::HandleAuraFeatherFall(AuraApplication const* aurApp, uint8 mode, bool apply) const
@@ -2614,12 +2595,7 @@ void AuraEffect::HandleAuraFeatherFall(AuraApplication const* aurApp, uint8 mode
             return;
     }
 
-    if (apply)
-        target->AddUnitMovementFlag(MOVEMENTFLAG_FALLING_SLOW);
-    else
-        target->RemoveUnitMovementFlag(MOVEMENTFLAG_FALLING_SLOW);
-
-    target->SendMovementFeatherFall();
+    target->SetFeatherFall(apply);
 
     // start fall from current height
     if (!apply && target->GetTypeId() == TYPEID_PLAYER)
@@ -2641,7 +2617,6 @@ void AuraEffect::HandleAuraHover(AuraApplication const* aurApp, uint8 mode, bool
     }
 
     target->SetHover(apply);    //! Sets movementflags
-    target->SendMovementHover();
 }
 
 void AuraEffect::HandleWaterBreathing(AuraApplication const* aurApp, uint8 mode, bool /*apply*/) const
@@ -2963,6 +2938,8 @@ void AuraEffect::HandleAuraModIncreaseFlightSpeed(AuraApplication const* aurApp,
         return;
 
     Unit* target = aurApp->GetTarget();
+    if (mode & AURA_EFFECT_HANDLE_CHANGE_AMOUNT_MASK)
+        target->UpdateSpeed(MOVE_FLIGHT, true);
 
     //! Update ability to fly
     if (GetAuraType() == SPELL_AURA_MOD_INCREASE_MOUNTED_FLIGHT_SPEED)
@@ -2971,21 +2948,9 @@ void AuraEffect::HandleAuraModIncreaseFlightSpeed(AuraApplication const* aurApp,
         if (mode & AURA_EFFECT_HANDLE_SEND_FOR_CLIENT_MASK && (apply || (!target->HasAuraType(SPELL_AURA_MOD_INCREASE_MOUNTED_FLIGHT_SPEED) && !target->HasAuraType(SPELL_AURA_FLY))))
         {
             target->SetCanFly(apply);
-            if (!apply)
-            {
-                target->m_movementInfo.SetFallTime(0);
-                target->RemoveUnitMovementFlag(MOVEMENTFLAG_MASK_MOVING_FLY);
-            }
 
-            Player* player = target->ToPlayer();
-            if (!player)
-                player = target->m_movedPlayer;
-
-            if (player)
-                player->SendMovementCanFlyChange();
-
-            //! We still need to initiate a server-side MoveFall here,
-            //! which requires MSG_MOVE_FALL_LAND on landing.
+            if (!apply && target->GetTypeId() == TYPEID_UNIT && !target->IsLevitating())
+                target->GetMotionMaster()->MoveFall();
         }
 
         //! Someone should clean up these hacks and remove it from this function. It doesn't even belong here.
@@ -3000,9 +2965,6 @@ void AuraEffect::HandleAuraModIncreaseFlightSpeed(AuraApplication const* aurApp,
                 target->SetUInt32Value(UNIT_FIELD_MOUNTDISPLAYID, 16314);
         }
     }
-
-    if (mode & AURA_EFFECT_HANDLE_CHANGE_AMOUNT_MASK)
-        target->UpdateSpeed(MOVE_FLIGHT, true);
 }
 
 void AuraEffect::HandleAuraModIncreaseSwimSpeed(AuraApplication const* aurApp, uint8 mode, bool /*apply*/) const
@@ -5037,20 +4999,19 @@ void AuraEffect::HandleForceReaction(AuraApplication const* aurApp, uint8 mode, 
 
     Unit* target = aurApp->GetTarget();
 
-    if (target->GetTypeId() != TYPEID_PLAYER)
+    Player* player = target->ToPlayer();
+    if (!player)
         return;
 
-    Player* player = (Player*)target;
+    uint32 factionId = GetMiscValue();
+    ReputationRank factionRank = ReputationRank(m_amount);
 
-    uint32 faction_id = GetMiscValue();
-    ReputationRank faction_rank = ReputationRank(m_amount);
-
-    player->GetReputationMgr().ApplyForceReaction(faction_id, faction_rank, apply);
+    player->GetReputationMgr().ApplyForceReaction(factionId, factionRank, apply);
     player->GetReputationMgr().SendForceReactions();
 
     // stop fighting if at apply forced rank friendly or at remove real rank friendly
-    if ((apply && faction_rank >= REP_FRIENDLY) || (!apply && player->GetReputationRank(faction_id) >= REP_FRIENDLY))
-        player->StopAttackFaction(faction_id);
+    if ((apply && factionRank >= REP_FRIENDLY) || (!apply && player->GetReputationRank(factionId) >= REP_FRIENDLY))
+        player->StopAttackFaction(factionId);
 }
 
 void AuraEffect::HandleAuraEmpathy(AuraApplication const* aurApp, uint8 mode, bool apply) const
@@ -5116,10 +5077,9 @@ void AuraEffect::HandleAuraConvertRune(AuraApplication const* aurApp, uint8 mode
 
     Unit* target = aurApp->GetTarget();
 
-    if (target->GetTypeId() != TYPEID_PLAYER)
+    Player* player = target->ToPlayer();
+    if (!player)
         return;
-
-    Player* player = (Player*)target;
 
     if (player->getClass() != CLASS_DEATH_KNIGHT)
         return;
