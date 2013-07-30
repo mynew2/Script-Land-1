@@ -1,6 +1,7 @@
 /*
  * Arena Team Ranking NPC.
  *  Made by u4ea
+ *  Fixed by SymbolixDEV
  * I'd very much appreciate if this NPC was named "Dow Jones"
  */
 
@@ -71,10 +72,6 @@ class ArenaTeamRanks : public CreatureScript
                 case RACE_TROLL:            race_s = "Troll";       break;
                 case RACE_BLOODELF:         race_s = "Blood Elf";   break;
                 case RACE_DRAENEI:          race_s = "Draenei";     break;
-                case RACE_NAGA:             race_s = "Naga";  	     break;
-                case RACE_GOBLIN:           race_s = "Goblin";      break;
-                case RACE_BROKEN:           race_s = "Broken";  	     break;
-                case RACE_VRYKUL:           race_s = "Vrykul";      break;
             }
             return race_s;
         }
@@ -102,9 +99,9 @@ class ArenaTeamRanks : public CreatureScript
             if(!player)
                 return "Offline";
             if(player->isAFK()) 
-                return "Online, <AFK> " + player->afkMsg; 
+                return "Online, <AFK> ";
             if(player->isDND()) 
-                return "Online, <Busy> " + player->dndMsg;
+                return "Online, <Busy> ";
             return "Online";
         }
         
