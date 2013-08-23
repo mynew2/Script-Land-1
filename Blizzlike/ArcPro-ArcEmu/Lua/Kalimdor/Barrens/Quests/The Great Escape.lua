@@ -1,12 +1,12 @@
---[[ WoTD License - 
+--[[ ArcPro Speculation License - 
 This software is provided as free and open source by the
-team of The WoTD Team. This script was written and is
+team of The ArcPro Speculation Team. This script was written and is
 protected by the GPL v2. Please give credit where credit
 is due, if modifying, redistributing and/or using this 
 software. Thank you.
-Thank: Dr_Org; for the Script
+Author: Dr_Org
 ~~End of License... Please Stand By...
--- WoTD Team, Janurary 19, 2010. ]]
+-- ArcPro Speculation, January 19, 2011 - 2013. ]]
 
 local quest_event_begin_trigger = 0
 local quest_event_begin_trigger2 = 0

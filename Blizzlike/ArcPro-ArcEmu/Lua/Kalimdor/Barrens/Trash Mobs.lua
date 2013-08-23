@@ -1,14 +1,14 @@
---[[ WoTD License - 
+--[[ ArcPro Speculation License - 
 This software is provided as free and open source by the
-team of The WoTD Team. This script was written and is
+team of The ArcPro Speculation Team. This script was written and is
 protected by the GPL v2. Please give credit where credit
 is due, if modifying, redistributing and/or using this 
 software. Thank you.
-Thank: zdroid9770; for the Script
+Author: ArcPro Speculation
 ~~End of License... Please Stand By...
--- WoTD Team, Janurary 19, 2010. ]]
+-- ArcPro Speculation, January 19, 2011 - 2013. ]]
 
---
+-- Baeldun Excavator
 function BaeldunExcavator_OnCombat(Unit, Event)
 	Unit:RegisterEvent("BaeldunExcavator_DefensiveStance", 1000, 1)
 	Unit:RegisterEvent("BaeldunExcavator_SunderArmor", 5000, 0)
@@ -34,7 +34,7 @@ RegisterUnitEvent(3374, 1, "BaeldunExcavator_OnCombat")
 RegisterUnitEvent(3374, 2, "BaeldunExcavator_OnLeaveCombat")
 RegisterUnitEvent(3374, 4, "BaeldunExcavator_OnDied")
 
---
+-- Baeldun Foreman
 function BaeldunForeman_OnCombat(Unit, Event)
 	Unit:RegisterEvent("BaeldunForeman_TorchToss", 8000, 0)
 end
@@ -55,7 +55,7 @@ RegisterUnitEvent(3375, 1, "BaeldunForeman_OnCombat")
 RegisterUnitEvent(3375, 2, "BaeldunForeman_OnLeaveCombat")
 RegisterUnitEvent(3375, 4, "BaeldunForeman_OnDied")
 
---
+-- Baeldun Officer
 function BaeldunOfficer_OnCombat(Unit, Event)
 	Unit:RegisterEvent("BaeldunOfficer_NimbleReflexes", 10000, 0)
 	Unit:RegisterEvent("BaeldunOfficer_Thrash", 5000, 0)
@@ -81,7 +81,7 @@ RegisterUnitEvent(3378, 1, "BaeldunOfficer_OnCombat")
 RegisterUnitEvent(3378, 2, "BaeldunOfficer_OnLeaveCombat")
 RegisterUnitEvent(3378, 4, "BaeldunOfficer_OnDied")
 
---
+-- Baeldun Rifleman
 function BaeldunRifleman_OnCombat(Unit, Event)
 	Unit:RegisterEvent("BaeldunRifleman_Shoot", 6000, 0)
 end
@@ -102,7 +102,7 @@ RegisterUnitEvent(3377, 1, "BaeldunRifleman_OnCombat")
 RegisterUnitEvent(3377, 2, "BaeldunRifleman_OnLeaveCombat")
 RegisterUnitEvent(3377, 4, "BaeldunRifleman_OnDied")
 
---
+-- Barak Kodobane
 function BarakKodobane_OnCombat(Unit, Event)
 	Unit:RegisterEvent("BarakKodobane_Shoot", 6000, 0)
 end
@@ -123,7 +123,7 @@ RegisterUnitEvent(3394, 1, "BarakKodobane_OnCombat")
 RegisterUnitEvent(3394, 2, "BarakKodobane_OnLeaveCombat")
 RegisterUnitEvent(3394, 4, "BarakKodobane_OnDied")
 
---
+-- Barrens Kodo
 function BarrensKodo_OnCombat(Unit, Event)
 	Unit:RegisterEvent("BarrensKodo_KodoStomp", 6000, 0)
 end
@@ -144,7 +144,7 @@ RegisterUnitEvent(3236, 1, "BarrensKodo_OnCombat")
 RegisterUnitEvent(3236, 2, "BarrensKodo_OnLeaveCombat")
 RegisterUnitEvent(3236, 4, "BarrensKodo_OnDied")
 
---
+-- Bristleback Geomancer
 function BristlebackGeomancer_OnCombat(Unit, Event)
 	Unit:RegisterEvent("BristlebackGeomancer_QuickFlameWard", 11000, 0)
 	Unit:RegisterEvent("BristlebackGeomancer_Flamestrike", 10000, 0)
@@ -175,7 +175,7 @@ RegisterUnitEvent(3263, 1, "BristlebackGeomancer_OnCombat")
 RegisterUnitEvent(3263, 2, "BristlebackGeomancer_OnLeaveCombat")
 RegisterUnitEvent(3263, 4, "BristlebackGeomancer_OnDied")
 
---
+-- Bristleback Hunter
 function BristlebackHunter_OnCombat(Unit, Event)
 	Unit:RegisterEvent("BristlebackHunter_Shoot", 5000, 0)
 	Unit:RegisterEvent("BristlebackHunter_PoisonedShot", 1000, 1)
@@ -201,7 +201,7 @@ RegisterUnitEvent(3258, 1, "BristlebackHunter_OnCombat")
 RegisterUnitEvent(3258, 2, "BristlebackHunter_OnLeaveCombat")
 RegisterUnitEvent(3258, 4, "BristlebackHunter_OnDied")
 
---
+--Bristleback Thornweaver
 function BristlebackThornweaver_OnCombat(Unit, Event)
 	Unit:RegisterEvent("BristlebackThornweaver_Thorns", 3000, 1)
 	Unit:RegisterEvent("BristlebackThornweaver_EntanglingRoots", 12000, 0)
@@ -227,7 +227,7 @@ RegisterUnitEvent(3261, 1, "BristlebackThornweaver_OnCombat")
 RegisterUnitEvent(3261, 2, "BristlebackThornweaver_OnLeaveCombat")
 RegisterUnitEvent(3261, 4, "BristlebackThornweaver_OnDied")
 
---
+-- Bristleback Water Seeker
 function BristlebackWaterSeeker_OnCombat(Unit, Event)
 	Unit:RegisterEvent("BristlebackWaterSeeker_FrostNova", 8000, 0)
 end
@@ -248,7 +248,7 @@ RegisterUnitEvent(3260, 1, "BristlebackWaterSeeker_OnCombat")
 RegisterUnitEvent(3260, 2, "BristlebackWaterSeeker_OnLeaveCombat")
 RegisterUnitEvent(3260, 4, "BristlebackWaterSeeker_OnDied")
 
---
+-- Burning Blade Acolyte
 function BurningBladeAcolyte_OnCombat(Unit, Event)
 	Unit:RegisterEvent("BurningBladeAcolyte_CurseofAgony", 8000, 2)
 	Unit:RegisterEvent("BurningBladeAcolyte_Inmolate", 3000, 2)
@@ -274,7 +274,7 @@ RegisterUnitEvent(3380, 1, "BurningBladeAcolyte_OnCombat")
 RegisterUnitEvent(3380, 2, "BurningBladeAcolyte_OnLeaveCombat")
 RegisterUnitEvent(3380, 4, "BurningBladeAcolyte_OnDied")
 
---
+-- Burning Blade Toxicologist
 function BurningBladeToxicologist_OnCombat(Unit, Event)
 	Unit:RegisterEvent("BurningBladeToxicologist_CurseofAgony", 8000, 2)
 	Unit:RegisterEvent("BurningBladeToxicologist_Inmolate", 3000, 2)
@@ -300,7 +300,7 @@ RegisterUnitEvent(12319, 1, "BurningBladeToxicologist_OnCombat")
 RegisterUnitEvent(12319, 2, "BurningBladeToxicologist_OnLeaveCombat")
 RegisterUnitEvent(12319, 4, "BurningBladeToxicologist_OnDied")
 
---
+-- Corrupted Dreadmaw Crocolisk
 function CorruptedDreadmawCrocolisk_OnCombat(Unit, Event)
 	Unit:RegisterEvent("CorruptedDreadmawCrocolisk_DecayedAgility", 10000, 1)
 end
@@ -321,7 +321,7 @@ RegisterUnitEvent(3231, 1, "CorruptedDreadmawCrocolisk_OnCombat")
 RegisterUnitEvent(3231, 2, "CorruptedDreadmawCrocolisk_OnLeaveCombat")
 RegisterUnitEvent(3231, 4, "CorruptedDreadmawCrocolisk_OnDied")
 
---
+-- Digger Flameforge
 function DiggerFlameforge_OnCombat(Unit, Event)
 	Unit:RegisterEvent("DiggerFlameforge_Backhand", 8000, 0)
 	Unit:RegisterEvent("DiggerFlameforge_ThrowDynamite", 12000, 0)
@@ -347,7 +347,7 @@ RegisterUnitEvent(5849, 1, "DiggerFlameforge_OnCombat")
 RegisterUnitEvent(5849, 2, "DiggerFlameforge_OnLeaveCombat")
 RegisterUnitEvent(5849, 4, "DiggerFlameforge_OnDied")
 
---
+-- Dreadmaw Crocolisk
 function DreadmawCrocolisk_OnCombat(Unit, Event)
 	Unit:RegisterEvent("DreadmawCrocolisk_MuscleTear", 8000, 0)
 end
@@ -368,7 +368,7 @@ RegisterUnitEvent(3110, 1, "DreadmawCrocolisk_OnCombat")
 RegisterUnitEvent(3110, 2, "DreadmawCrocolisk_OnLeaveCombat")
 RegisterUnitEvent(3110, 4, "DreadmawCrocolisk_OnDied")
 
---
+-- Elder Mystic Razorsnout
 function ElderMysticRazorsnout_OnCombat(Unit, Event)
 	Unit:RegisterEvent("ElderMysticRazorsnout_EarthbindTotem", 4000, 1)
 	Unit:RegisterEvent("ElderMysticRazorsnout_HealingWave", 12000, 0)
@@ -394,7 +394,7 @@ RegisterUnitEvent(3270, 1, "ElderMysticRazorsnout_OnCombat")
 RegisterUnitEvent(3270, 2, "ElderMysticRazorsnout_OnLeaveCombat")
 RegisterUnitEvent(3270, 4, "ElderMysticRazorsnout_OnDied")
 
---
+-- Greater Barrens Kodo
 function GreaterBarrensKodo_OnCombat(Unit, Event)
 	Unit:RegisterEvent("GreaterBarrensKodo_RushingCharge", 8000, 0)
 end
@@ -415,7 +415,7 @@ RegisterUnitEvent(3235, 1, "GreaterBarrensKodo_OnCombat")
 RegisterUnitEvent(3235, 2, "GreaterBarrensKodo_OnLeaveCombat")
 RegisterUnitEvent(3235, 4, "GreaterBarrensKodo_OnDied")
 
---
+-- Greater Thunderhawk
 function GreaterThunderhawk_OnCombat(Unit, Event)
 	Unit:RegisterEvent("GreaterThunderhawk_ThunderClap", 10000, 0)
 end
@@ -436,7 +436,7 @@ RegisterUnitEvent(3249, 1, "GreaterThunderhawk_OnCombat")
 RegisterUnitEvent(3249, 2, "GreaterThunderhawk_OnLeaveCombat")
 RegisterUnitEvent(3249, 4, "GreaterThunderhawk_OnDied")
 
---
+-- Kolkar Bloodcharger
 function KolkarBloodcharger_OnCombat(Unit, Event)
 	Unit:RegisterEvent("KolkarBloodcharger_Bloodlust", 4000, 1)
 	Unit:RegisterEvent("KolkarBloodcharger_Corruption", 10000, 0)
@@ -462,7 +462,7 @@ RegisterUnitEvent(3397, 1, "KolkarBloodcharger_OnCombat")
 RegisterUnitEvent(3397, 2, "KolkarBloodcharger_OnLeaveCombat")
 RegisterUnitEvent(3397, 4, "KolkarBloodcharger_OnDied")
 
---
+-- Kolkar Invader
 function KolkarInvader_OnCombat(Unit, Event)
 	Unit:RegisterEvent("KolkarInvader_FlingTorch", 2000, 1)
 	Unit:RegisterEvent("KolkarInvader_RushingCharge", 8000, 0)
@@ -498,7 +498,7 @@ RegisterUnitEvent(9524, 1, "KolkarInvader_OnCombat")
 RegisterUnitEvent(9524, 2, "KolkarInvader_OnLeaveCombat")
 RegisterUnitEvent(9524, 4, "KolkarInvader_OnDied")
 
---
+-- Kolkar Marauder
 function KolkarMarauder_OnCombat(Unit, Event)
 	Unit:RegisterEvent("KolkarMarauder_Strike", 6000, 0)
 end
@@ -519,7 +519,7 @@ RegisterUnitEvent(3275, 1, "KolkarMarauder_OnCombat")
 RegisterUnitEvent(3275, 2, "KolkarMarauder_OnLeaveCombat")
 RegisterUnitEvent(3275, 4, "KolkarMarauder_OnDied")
 
---
+-- Kolkar Pack Runner
 function KolkarPackRunner_OnCombat(Unit, Event)
 	Unit:RegisterEvent("KolkarPackRunner_BattleShout", 4000, 1)
 end
@@ -540,7 +540,7 @@ RegisterUnitEvent(3274, 1, "KolkarPackRunner_OnCombat")
 RegisterUnitEvent(3274, 2, "KolkarPackRunner_OnLeaveCombat")
 RegisterUnitEvent(3274, 4, "KolkarPackRunner_OnDied")
 
---
+-- Kolkar Stormer
 function KolkarStormer_OnCombat(Unit, Event)
 	Unit:RegisterEvent("KolkarStormer_LightningBolt", 8000, 0)
 	Unit:RegisterEvent("KolkarStormer_LightningCloud", 4000, 1)
@@ -566,7 +566,7 @@ RegisterUnitEvent(3273, 1, "KolkarStormer_OnCombat")
 RegisterUnitEvent(3273, 2, "KolkarStormer_OnLeaveCombat")
 RegisterUnitEvent(3273, 4, "KolkarStormer_OnDied")
 
---
+-- Kolkar Stormseer
 function KolkarStormseer_OnCombat(Unit, Event)
 	Unit:RegisterEvent("KolkarStormseer_FlingTorch", 2000, 1)
 	Unit:RegisterEvent("KolkarStormseer_LightningBolt", 8000, 0)
@@ -597,7 +597,7 @@ RegisterUnitEvent(9523, 1, "KolkarStormseer_OnCombat")
 RegisterUnitEvent(9523, 2, "KolkarStormseer_OnLeaveCombat")
 RegisterUnitEvent(9523, 4, "KolkarStormseer_OnDied")
 
---
+-- Kolkar Wrangler
 function KolkarWrangler_OnCombat(Unit, Event)
 	Unit:RegisterEvent("KolkarWrangler_Net", 10000, 0)
 	Unit:RegisterEvent("KolkarWrangler_Shoot", 6000, 0)
@@ -627,7 +627,7 @@ RegisterUnitEvent(3272, 1, "KolkarWrangler_OnCombat")
 RegisterUnitEvent(3272, 2, "KolkarWrangler_OnLeaveCombat")
 RegisterUnitEvent(3272, 4, "KolkarWrangler_OnDied")
 
---
+-- Lost Barrens Kodo
 function LostBarrensKodo_OnCombat(Unit, Event)
 	Unit:RegisterEvent("LostBarrensKodo_KodoStomp", 6000, 0)
 end
@@ -648,7 +648,7 @@ RegisterUnitEvent(3236, 1, "LostBarrensKodo_OnCombat")
 RegisterUnitEvent(3236, 2, "LostBarrensKodo_OnLeaveCombat")
 RegisterUnitEvent(3236, 4, "LostBarrensKodo_OnDied")
 
---
+-- Oasis Snapjaw
 function OasisSnapjaw_OnCombat(Unit, Event)
 	Unit:RegisterEvent("OasisSnapjaw_SlingDirt", 12000, 0)
 end
@@ -669,7 +669,7 @@ RegisterUnitEvent(3461, 1, "OasisSnapjaw_OnCombat")
 RegisterUnitEvent(3461, 2, "OasisSnapjaw_OnLeaveCombat")
 RegisterUnitEvent(3461, 4, "OasisSnapjaw_OnDied")
 
---
+-- Razorfen Battleguard
 function RazorfenBattleguard_OnCombat(Unit, Event)
 	Unit:RegisterEvent("RazorfenBattleguard_Slam", 6000, 0)
 end
@@ -690,7 +690,7 @@ RegisterUnitEvent(7873, 1, "RazorfenBattleguard_OnCombat")
 RegisterUnitEvent(7873, 2, "RazorfenBattleguard_OnLeaveCombat")
 RegisterUnitEvent(7873, 4, "RazorfenBattleguard_OnDied")
 
---
+-- Razorfen Thornweaver
 function RazorfenThornweaver_OnCombat(Unit, Event)
 	Unit:RegisterEvent("RazorfenThornweaver_HealingTouch", 15000, 0)
 	Unit:RegisterEvent("RazorfenThornweaver_Thorns", 4000, 1)
@@ -716,7 +716,7 @@ RegisterUnitEvent(7874, 1, "RazorfenThornweaver_OnCombat")
 RegisterUnitEvent(7874, 2, "RazorfenThornweaver_OnLeaveCombat")
 RegisterUnitEvent(7874, 4, "RazorfenThornweaver_OnDied")
 
---
+-- Razormane Defender
 function RazormaneDefender_OnCombat(Unit, Event)
 	Unit:RegisterEvent("RazormaneDefender_BattleStance", 1000, 1)
 	Unit:RegisterEvent("RazormaneDefender_DemoralizingShout", 4000, 1)
@@ -747,7 +747,7 @@ RegisterUnitEvent(3266, 1, "RazormaneDefender_OnCombat")
 RegisterUnitEvent(3266, 2, "RazormaneDefender_OnLeaveCombat")
 RegisterUnitEvent(3266, 4, "RazormaneDefender_OnDied")
 
---
+-- Razormane Geomancer
 function RazormaneGeomancer_OnCombat(Unit, Event)
 	Unit:RegisterEvent("RazormaneGeomancer_Fireball", 8000, 0)
 	Unit:RegisterEvent("RazormaneGeomancer_FrostArmor", 1000, 1)
@@ -773,7 +773,7 @@ RegisterUnitEvent(3269, 1, "RazormaneGeomancer_OnCombat")
 RegisterUnitEvent(3269, 2, "RazormaneGeomancer_OnLeaveCombat")
 RegisterUnitEvent(3269, 4, "RazormaneGeomancer_OnDied")
 
---
+-- Razormane Hunter
 function RazormaneHunter_OnCombat(Unit, Event)
 	Unit:RegisterEvent("RazormaneHunter_Shoot", 6000, 0)
 	Unit:RegisterEvent("RazormaneHunter_RazormaneWolf", 3000, 1)
@@ -799,7 +799,7 @@ RegisterUnitEvent(3265, 1, "RazormaneHunter_OnCombat")
 RegisterUnitEvent(3265, 2, "RazormaneHunter_OnLeaveCombat")
 RegisterUnitEvent(3265, 4, "RazormaneHunter_OnDied")
 
---
+-- Razormane Mystic
 function RazormaneMystic_OnCombat(Unit, Event)
 	Unit:RegisterEvent("RazormaneMystic_HealingWave", 12000, 0)
 	Unit:RegisterEvent("RazormaneMystic_LightningShield", 3000, 0)
@@ -825,7 +825,7 @@ RegisterUnitEvent(3271, 1, "RazormaneMystic_OnCombat")
 RegisterUnitEvent(3271, 2, "RazormaneMystic_OnLeaveCombat")
 RegisterUnitEvent(3271, 4, "RazormaneMystic_OnDied")
 
---
+-- Razormane Patchfinder
 function RazormanePathfinder_OnCombat(Unit, Event)
 	Unit:RegisterEvent("RazormanePathfinder_Shoot", 6000, 0)
 	Unit:RegisterEvent("RazormanePathfinder_Thrash", 4000, 1)
@@ -851,7 +851,7 @@ RegisterUnitEvent(3456, 1, "RazormanePathfinder_OnCombat")
 RegisterUnitEvent(3456, 2, "RazormanePathfinder_OnLeaveCombat")
 RegisterUnitEvent(3456, 4, "RazormanePathfinder_OnDied")
 
---
+-- Razormane Seer
 function RazormaneSeer_OnCombat(Unit, Event)
 	Unit:RegisterEvent("RazormaneSeer_HealingWard", 2000, 1)
 	Unit:RegisterEvent("RazormaneSeer_SearingTotem", 4000, 1)
@@ -877,7 +877,7 @@ RegisterUnitEvent(3458, 1, "RazormaneSeer_OnCombat")
 RegisterUnitEvent(3458, 2, "RazormaneSeer_OnLeaveCombat")
 RegisterUnitEvent(3458, 4, "RazormaneSeer_OnDied")
 
---
+-- Razormane Stalker
 function RazormaneStalker_OnCombat(Unit, Event)
 	Unit:RegisterEvent("RazormaneStalker_SinesterStrike", 3000, 0)
 end
@@ -898,7 +898,7 @@ RegisterUnitEvent(3457, 1, "RazormaneStalker_OnCombat")
 RegisterUnitEvent(3457, 2, "RazormaneStalker_OnLeaveCombat")
 RegisterUnitEvent(3457, 4, "RazormaneStalker_OnDied")
 
---
+-- Razormane Thornweaver
 function RazormaneThornweaver_OnCombat(Unit, Event)
 	Unit:RegisterEvent("RazormaneThornweaver_FaerieFire", 8000, 1)
 	Unit:RegisterEvent("RazormaneThornweaver_Thorns", 2000, 1)
@@ -924,7 +924,7 @@ RegisterUnitEvent(3268, 1, "RazormaneThornweaver_OnCombat")
 RegisterUnitEvent(3268, 2, "RazormaneThornweaver_OnLeaveCombat")
 RegisterUnitEvent(3268, 4, "RazormaneThornweaver_OnDied")
 
---
+-- Razor Water Seeker
 function RazormaneWaterSeeker_OnCombat(Unit, Event)
 	Unit:RegisterEvent("RazormaneWaterSeeker_CreepingMold", 4000, 1)
 end
@@ -945,7 +945,7 @@ RegisterUnitEvent(3267, 1, "RazormaneWaterSeeker_OnCombat")
 RegisterUnitEvent(3267, 2, "RazormaneWaterSeeker_OnLeaveCombat")
 RegisterUnitEvent(3267, 4, "RazormaneWaterSeeker_OnDied")
 
---
+-- Savannah Matriarch
 function SavannahMatriarch_OnCombat(Unit, Event)
 	Unit:RegisterEvent("SavannahMatriarch_SavannahCubs", 4000, 1)
 end
@@ -966,7 +966,7 @@ RegisterUnitEvent(5865, 1, "SavannahMatriarch_OnCombat")
 RegisterUnitEvent(5865, 2, "SavannahMatriarch_OnLeaveCombat")
 RegisterUnitEvent(5865, 4, "SavannahMatriarch_OnDied")
 
---
+-- Silithid Creeper Egg
 function SilithidCreeperEgg_OnCombat(Unit, Event)
 	Unit:RegisterEvent("SilithidCreeperEgg_Suicide", 20000, 1)
 	Unit:RegisterEvent("SilithidCreeperEgg_SummonSilithidGrub", 4000, 1)
@@ -992,7 +992,7 @@ RegisterUnitEvent(5781, 1, "SilithidCreeperEgg_OnCombat")
 RegisterUnitEvent(5781, 2, "SilithidCreeperEgg_OnLeaveCombat")
 RegisterUnitEvent(5781, 4, "SilithidCreeperEgg_OnDied")
 
---
+-- Silithid Creeper
 function SilithidCreeper_OnCombat(Unit, Event)
 	Unit:RegisterEvent("SilithidCreeper_SilithidCreeperEgg", 4000, 1)
 end
@@ -1013,7 +1013,7 @@ RegisterUnitEvent(3250, 1, "SilithidCreeper_OnCombat")
 RegisterUnitEvent(3250, 2, "SilithidCreeper_OnLeaveCombat")
 RegisterUnitEvent(3250, 4, "SilithidCreeper_OnDied")
 
---
+-- Silithid Harvester
 function SilithidHarvester_OnCombat(Unit, Event)
 	Unit:RegisterEvent("SilithidHarvester_HarvestSwarm", 6000, 0)
 	Unit:RegisterEvent("SilithidHarvester_SummonHarvesterSwarm", 3000, 1)
@@ -1039,7 +1039,7 @@ RegisterUnitEvent(3253, 1, "SilithidHarvester_OnCombat")
 RegisterUnitEvent(3253, 2, "SilithidHarvester_OnLeaveCombat")
 RegisterUnitEvent(3253, 4, "SilithidHarvester_OnDied")
 
---
+-- Silithid Swarmer
 function SilithidSwarmer_OnCombat(Unit, Event)
 	Unit:RegisterEvent("SilithidSwarmer_SilithidSwarm", 3000, 1)
 end
@@ -1060,7 +1060,7 @@ RegisterUnitEvent(3252, 1, "SilithidSwarmer_OnCombat")
 RegisterUnitEvent(3252, 2, "SilithidSwarmer_OnLeaveCombat")
 RegisterUnitEvent(3252, 4, "SilithidSwarmer_OnDied")
 
---
+-- Sludge Beast
 function SludgeBeast_OnCombat(Unit, Event)
 	Unit:RegisterEvent("SludgeBeast_BlackSludge", 6000, 0)
 end
@@ -1084,7 +1084,7 @@ RegisterUnitEvent(3295, 1, "SludgeBeast_OnCombat")
 RegisterUnitEvent(3295, 2, "SludgeBeast_OnLeaveCombat")
 RegisterUnitEvent(3295, 4, "SludgeBeast_OnDied")
 
---
+-- Southsea Brigand
 function SouthseaBrigand_OnCombat(Unit, Event)
 	Unit:RegisterEvent("SouthseaBrigand_Backhand", 8000, 0)
 end
@@ -1105,7 +1105,7 @@ RegisterUnitEvent(3381, 1, "SouthseaBrigand_OnCombat")
 RegisterUnitEvent(3381, 2, "SouthseaBrigand_OnLeaveCombat")
 RegisterUnitEvent(3381, 4, "SouthseaBrigand_OnDied")
 
---
+-- Southsea Cannoneer
 function SouthseaCannoneer_OnCombat(Unit, Event)
 	Unit:RegisterEvent("SouthseaCannoneer_Shoot", 6000, 0)
 end
@@ -1126,7 +1126,7 @@ RegisterUnitEvent(3382, 1, "SouthseaCannoneer_OnCombat")
 RegisterUnitEvent(3382, 2, "SouthseaCannoneer_OnLeaveCombat")
 RegisterUnitEvent(3382, 4, "SouthseaCannoneer_OnDied")
 
---
+-- Southsea Privateer
 function SouthseaPrivateer_OnCombat(Unit, Event)
 	Unit:RegisterEvent("SouthseaPrivateer_FireShot", 9000, 0)
 	Unit:RegisterEvent("SouthseaPrivateer_Shoot", 6000, 0)
@@ -1152,7 +1152,7 @@ RegisterUnitEvent(3384, 1, "SouthseaPrivateer_OnCombat")
 RegisterUnitEvent(3384, 2, "SouthseaPrivateer_OnLeaveCombat")
 RegisterUnitEvent(3384, 4, "SouthseaPrivateer_OnDied")
 
---
+-- Stormsnout
 function Stormsnout_OnCombat(Unit, Event)
 	Unit:RegisterEvent("Stormsnout_LizardBolt", 6000, 0)
 end
@@ -1173,7 +1173,7 @@ RegisterUnitEvent(3240, 1, "Stormsnout_OnCombat")
 RegisterUnitEvent(3240, 2, "Stormsnout_OnLeaveCombat")
 RegisterUnitEvent(3240, 4, "Stormsnout_OnDied")
 
---
+-- Summoned Felhunter
 function SummonedFelhunter_OnCombat(Unit, Event)
 	Unit:RegisterEvent("SummonedFelhunter_ManaBurn", 6000, 0)
 end
@@ -1194,7 +1194,7 @@ RegisterUnitEvent(6268, 1, "SummonedFelhunter_OnCombat")
 RegisterUnitEvent(6268, 2, "SummonedFelhunter_OnLeaveCombat")
 RegisterUnitEvent(6268, 4, "SummonedFelhunter_OnDied")
 
---
+-- Sunscale Lashtail
 function SunscaleLashtail_OnCombat(Unit, Event)
 	Unit:RegisterEvent("SunscaleLashtail_Lash", 6000, 0)
 end
@@ -1215,7 +1215,7 @@ RegisterUnitEvent(3254, 1, "SunscaleLashtail_OnCombat")
 RegisterUnitEvent(3254, 2, "SunscaleLashtail_OnLeaveCombat")
 RegisterUnitEvent(3254, 4, "SunscaleLashtail_OnDied")
 
---
+-- Sunscale Scytheclaw
 function SunscaleScytheclaw_OnCombat(Unit, Event)
 	Unit:RegisterEvent("SunscaleScytheclaw_Thrash", 6000, 0)
 end
@@ -1236,7 +1236,7 @@ RegisterUnitEvent(3256, 1, "SunscaleScytheclaw_OnCombat")
 RegisterUnitEvent(3256, 2, "SunscaleScytheclaw_OnLeaveCombat")
 RegisterUnitEvent(3256, 4, "SunscaleScytheclaw_OnDied")
 
---
+-- Swinegart Spearhide
 function SwinegartSpearhide_OnCombat(Unit, Event)
 	Unit:RegisterEvent("SwinegartSpearhide_PierceArmor", 10000, 0)
 end
@@ -1257,7 +1257,7 @@ RegisterUnitEvent(5864, 1, "SwinegartSpearhide_OnCombat")
 RegisterUnitEvent(5864, 2, "SwinegartSpearhide_OnLeaveCombat")
 RegisterUnitEvent(5864, 4, "SwinegartSpearhide_OnDied")
 
---
+-- Theramore Marine
 function TheramoreMarine_OnCombat(Unit, Event)
 	Unit:RegisterEvent("TheramoreMarine_DefensiveStance", 2000, 1)
 	Unit:RegisterEvent("TheramoreMarine_Disarm", 6000, 0)
@@ -1288,7 +1288,7 @@ RegisterUnitEvent(3385, 1, "TheramoreMarine_OnCombat")
 RegisterUnitEvent(3385, 2, "TheramoreMarine_OnLeaveCombat")
 RegisterUnitEvent(3385, 4, "TheramoreMarine_OnDied")
 
---
+-- Theramore Preserver
 function TheramorePreserver_OnCombat(Unit, Event)
 	Unit:RegisterEvent("TheramorePreserver_Smite", 8000, 0)
 	Unit:RegisterEvent("TheramorePreserver_LesserHeal", 12000, 0)
@@ -1319,7 +1319,7 @@ RegisterUnitEvent(3386, 1, "TheramorePreserver_OnCombat")
 RegisterUnitEvent(3386, 2, "TheramorePreserver_OnLeaveCombat")
 RegisterUnitEvent(3386, 4, "TheramorePreserver_OnDied")
 
---
+-- Thunderhawk Cloudscraper
 function ThunderhawkCloudscraper_OnCombat(Unit, Event)
 	Unit:RegisterEvent("ThunderhawkCloudscraper_ThunderClap", 10000, 0)
 end
@@ -1340,7 +1340,7 @@ RegisterUnitEvent(3424, 1, "ThunderhawkCloudscraper_OnCombat")
 RegisterUnitEvent(3424, 2, "ThunderhawkCloudscraper_OnLeaveCombat")
 RegisterUnitEvent(3424, 4, "ThunderhawkCloudscraper_OnDied")
 
---
+-- Thunderhawk Hatchling
 function ThunderhawkHatchling_OnCombat(Unit, Event)
 	Unit:RegisterEvent("ThunderhawkHatchling_LightningShield", 4000, 0)
 	Unit:RegisterEvent("ThunderhawkHatchling_LightningBolt", 8000, 0)
@@ -1366,7 +1366,7 @@ RegisterUnitEvent(3247, 1, "ThunderhawkHatchling_OnCombat")
 RegisterUnitEvent(3247, 2, "ThunderhawkHatchling_OnLeaveCombat")
 RegisterUnitEvent(3247, 4, "ThunderhawkHatchling_OnDied")
 
---
+-- Venture Co. Enforcer
 function VentureCoEnforcer_OnCombat(Unit, Event)
 	Unit:RegisterEvent("VentureCoEnforcer_BattleShout", 2000, 1)
 	Unit:RegisterEvent("VentureCoEnforcer_Disarm", 10000, 0)
@@ -1392,7 +1392,7 @@ RegisterUnitEvent(3283, 1, "VentureCoEnforcer_OnCombat")
 RegisterUnitEvent(3283, 2, "VentureCoEnforcer_OnLeaveCombat")
 RegisterUnitEvent(3283, 4, "VentureCoEnforcer_OnDied")
 
---
+-- Venture Co. Mercenary
 function VentureCoMercenary_OnCombat(Unit, Event)
 	Unit:RegisterEvent("VentureCoMercenary_Shoot", 6000, 0)
 end
@@ -1413,7 +1413,7 @@ RegisterUnitEvent(3382, 1, "VentureCoMercenary_OnCombat")
 RegisterUnitEvent(3382, 2, "VentureCoMercenary_OnLeaveCombat")
 RegisterUnitEvent(3382, 4, "VentureCoMercenary_OnDied")
 
---
+-- Witchwing Ambusher
 function WitchwingAmbusher_OnCombat(Unit, Event)
 	Unit:RegisterEvent("WitchwingAmbusher_ExploitWeakness", 5000, 0)
 end
@@ -1434,7 +1434,7 @@ RegisterUnitEvent(3279, 1, "WitchwingAmbusher_OnCombat")
 RegisterUnitEvent(3279, 2, "WitchwingAmbusher_OnLeaveCombat")
 RegisterUnitEvent(3279, 4, "WitchwingAmbusher_OnDied")
 
---
+-- Witchwing Harpy
 function WitchwingHarpy_OnCombat(Unit, Event)
 	Unit:RegisterEvent("WitchwingHarpy_CurseofMending", 4000, 1)
 end
@@ -1455,7 +1455,7 @@ RegisterUnitEvent(3276, 1, "WitchwingHarpy_OnCombat")
 RegisterUnitEvent(3276, 2, "WitchwingHarpy_OnLeaveCombat")
 RegisterUnitEvent(3276, 4, "WitchwingHarpy_OnDied")
 
---
+-- Witchwing Roguefeather
 function WitchwingRoguefeather_OnCombat(Unit, Event)
 	Unit:RegisterEvent("WitchwingRoguefeather_ExploitWeakness", 60000, 0)
 	Unit:RegisterEvent("WitchwingRoguefeather_SlowingPoison", 10000, 0)
@@ -1481,7 +1481,7 @@ RegisterUnitEvent(3277, 1, "WitchwingRoguefeather_OnCombat")
 RegisterUnitEvent(3277, 2, "WitchwingRoguefeather_OnLeaveCombat")
 RegisterUnitEvent(3277, 4, "WitchwingRoguefeather_OnDied")
 
---
+-- Withwing Slayer
 function WitchwingSlayer_OnCombat(Unit, Event)
 	Unit:RegisterEvent("WitchwingSlayer_DemoralizingShout", 3000, 1)
 end
@@ -1502,7 +1502,7 @@ RegisterUnitEvent(3278, 1, "WitchwingSlayer_OnCombat")
 RegisterUnitEvent(3278, 2, "WitchwingSlayer_OnLeaveCombat")
 RegisterUnitEvent(3278, 4, "WitchwingSlayer_OnDied")
 
---
+-- Witchwing Windcaller
 function WitchwingWindcaller_OnCombat(Unit, Event)
 	Unit:RegisterEvent("WitchwingWindcaller_EnvelopingWinds", 10000, 0)
 end

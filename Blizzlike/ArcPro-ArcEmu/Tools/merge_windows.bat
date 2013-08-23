@@ -1,0 +1,1 @@
+copy /a *.lua /b Compressed.lua
