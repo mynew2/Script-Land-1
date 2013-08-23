@@ -129,6 +129,7 @@ void AddSC_boss_gyth();
 void AddSC_boss_rend_blackhand();
 void AddSC_boss_gizrul_the_slavener();
 void AddSC_boss_urok_doomhowl();
+void AddSC_boss_lord_valthalak();
 void AddSC_instance_blackrock_spire();
 void AddSC_boss_razorgore();                 //Blackwing lair
 void AddSC_boss_vaelastrasz();
@@ -469,9 +470,9 @@ void AddSC_boss_toravon();
 void AddSC_instance_archavon();
 void AddSC_boss_trollgore();             //Drak'Tharon Keep
 void AddSC_boss_novos();
-void AddSC_boss_dred();
+void AddSC_boss_king_dred();
 void AddSC_boss_tharon_ja();
-void AddSC_instance_drak_tharon();
+void AddSC_instance_drak_tharon_keep();
 void AddSC_boss_cyanigosa();             //Violet Hold
 void AddSC_boss_erekem();
 void AddSC_boss_ichoron();
@@ -615,6 +616,9 @@ void AddSC_shattrath_city();
 void AddSC_terokkar_forest();
 void AddSC_zangarmarsh();
 
+// Maelstrom
+void AddSC_kezan();
+
 // Events
 void AddSC_event_childrens_week();
 
@@ -644,6 +648,7 @@ void AddScripts()
     AddKalimdorScripts();
     AddOutlandScripts();
     AddNorthrendScripts();
+    AddMaelstromScripts();
     AddEventScripts();
     AddBattlegroundScripts();
     AddOutdoorPvPScripts();
@@ -773,6 +778,7 @@ void AddEasternKingdomsScripts()
     AddSC_boss_rend_blackhand();
     AddSC_boss_gizrul_the_slavener();
     AddSC_boss_urok_doomhowl();
+    AddSC_boss_lord_valthalak();
     AddSC_instance_blackrock_spire();
     AddSC_boss_razorgore();                 //Blackwing lair
     AddSC_boss_vaelastrasz();
@@ -1215,9 +1221,9 @@ void AddNorthrendScripts()
     AddSC_instance_archavon();
     AddSC_boss_trollgore();             //Drak'Tharon Keep
     AddSC_boss_novos();
-    AddSC_boss_dred();
+    AddSC_boss_king_dred();
     AddSC_boss_tharon_ja();
-    AddSC_instance_drak_tharon();
+    AddSC_instance_drak_tharon_keep();
     AddSC_boss_cyanigosa();             //Violet Hold
     AddSC_boss_erekem();
     AddSC_boss_ichoron();
@@ -1273,6 +1279,14 @@ void AddNorthrendScripts()
     AddSC_zuldrak();
     AddSC_crystalsong_forest();
     AddSC_isle_of_conquest();
+#endif
+}
+
+
+void AddMaelstromScripts()
+{
+#ifdef SCRIPTS
+    AddSC_kezan();
 #endif
 }
 

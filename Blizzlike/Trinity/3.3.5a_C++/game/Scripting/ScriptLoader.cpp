@@ -127,6 +127,7 @@ void AddSC_boss_gyth();
 void AddSC_boss_rend_blackhand();
 void AddSC_boss_gizrul_the_slavener();
 void AddSC_boss_urok_doomhowl();
+void AddSC_boss_lord_valthalak();
 void AddSC_instance_blackrock_spire();
 void AddSC_boss_razorgore();                 //Blackwing lair
 void AddSC_boss_vaelastrasz();
@@ -534,6 +535,7 @@ void AddSC_boss_nexusprince_shaffar();       //Auchindoun Mana Tombs
 void AddSC_boss_pandemonius();
 void AddSC_boss_darkweaver_syth();           //Auchindoun Sekketh Halls
 void AddSC_boss_talon_king_ikiss();
+void AddSC_boss_anzu();
 void AddSC_instance_sethekk_halls();
 void AddSC_instance_shadow_labyrinth();      //Auchindoun Shadow Labyrinth
 void AddSC_boss_ambassador_hellmaw();
@@ -771,6 +773,7 @@ void AddEasternKingdomsScripts()
     AddSC_boss_rend_blackhand();
     AddSC_boss_gizrul_the_slavener();
     AddSC_boss_urok_doomhowl();
+    AddSC_boss_lord_valthalak();
     AddSC_instance_blackrock_spire();
     AddSC_boss_razorgore();                 //Blackwing lair
     AddSC_boss_vaelastrasz();
@@ -1025,6 +1028,7 @@ void AddOutlandScripts()
     AddSC_boss_pandemonius();
     AddSC_boss_darkweaver_syth();           //Auchindoun Sekketh Halls
     AddSC_boss_talon_king_ikiss();
+    AddSC_boss_anzu();
     AddSC_instance_sethekk_halls();
     AddSC_instance_shadow_labyrinth();      //Auchindoun Shadow Labyrinth
     AddSC_boss_ambassador_hellmaw();
