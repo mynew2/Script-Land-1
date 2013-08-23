@@ -1,0 +1,5 @@
+## Interface: 30300
+## Title: Arena Spectator UI
+## Version: 15
+ArenaSpectator.lua
+combatfeedback.lua

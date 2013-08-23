@@ -1,0 +1,83 @@
+0.7.2
+* Cataclysm (up until 4.3.4) is now supported. Some quick testing has been done, but there may also be some issues that I missed. Consider cataclysm support to be in beta for now. Also, please note that the addon should still work fine in Wrath of the Lich King.
+	- Replaced all references to global variable this, event and arg1 with something else that does work.
+	- Manually updated the chronos library. Replaced the VARIABLES_LOADED event with ADDON_LOADED. AceTimer was also considered, but would have required more work to implement.
+	- Changed the loading process of GMGenie windows and textareas, so that backgrounds are once again loaded and the size is set correctly.
+	- Updated the interface version to 40300.
+* Small changes and fixes
+	- Fixed a small lua error on first load of the addon (related to the minimap button position).
+
+0.7.1
+* Small changes and fixes
+	- When there is a large amount of offline tickets online tickets will now show up properly once again.
+
+0.7
+* General changes:
+	- New hud, replacing the old minimap menu. This hud also shows gm/chat/visibility/whisper/fly/speed status, and allows changing it.
+	- When porting to a different map flight mode is automatically re-enabled (if it was enabled previously).
+	- Hyperlinks for gameobjects, gameobjects entries, creatures and creature entries now give a nice dropdown with usefull options when you click on them, instead of an annoying lua error. Options include: spawning/removing, porting to and listing spawned creatures/gameobjects.
+	- Generally a more consistent interface.
+	- Names in anticheat messages are now clickable (left click opens the spy window, makes you invisible, appears and show the kind of cheats detected, right click opens the usual player menu). This was tested on a non-standard anti-cheat though, so it may not work on all servers.
+* Changes to ticket interface:
+	- When showing offline tickets is enabled, offline tickets show up in red.
+	- Previously read tickets show up in a little darker colour than unread tickets.
+	- The ticket you're currently reading is shown in white.
+	- Refresh button moved to the top of the window, settings button removed (settings can be accessed through the interface options, like for all addons).
+	- Ticket count at the bottom of the window now separates online and offline tickets.
+	- Fixed a bug where some tickets would incorrectly be highlighted (as if they were being read) in the list.
+* Changes to the spy (playerinfo) window:
+	- You can now right click in the spy window to copy the playerinfo.
+	- A refresh button has been added at the top of the window.
+	- Latencies of 1k and higher now show up in red. Stripped the ms of the latency so that larger numbers fit in.
+	- Fixed using /spy without a name (using target instead when no name is specified).
+
+0.6.1
+* Small changes and fixes
+	- Viewing ticket comments bugged out for tickets with multiple lines of text.
+
+0.6
+* Major visible changes
+	- Ticket comment and assign/unassign fully fixed and implemented.
+	- Added mute and ban macros, with the option to announce to the server.
+	- The ticket window now shows other GMs reading the ticket, provided the GMs are in the same guild.
+	- Added character customisation options to the macro menus.
+* Small changes and fixes
+	- Fixed a very rare lua error in the ticket tracker.
+	- When pressing enter or escape in a text box it now automatically looses focus.
+	- Fixed all lua errors while tabbing through text boxes in the settings.
+
+0.5
+* Major visible changes:
+	- Added teleport macros.
+	- Added an extra dropdown to the spy window for advanced commands (currently lookup player and baninfo).
+	- Added an advanced building tool (can be opened with /builder).
+	- Overhauled user interface.
+	- Added a minimap button with a menu for GM Genie. The button shows the number of tickets.
+* Small changes and fixes
+	- Fixed the previous and next page buttons that were missing from the ticket window.
+	- Double click the window title to reset it to it's default position.
+	- Made the text at the bottom of the ticket window a button (doesn't look like one but it is!). You can use it to easily turn offlines tickets on and off.
+	- Changed the spy window to show more detailed location information and include the player's phase (if online).
+	- Changed the (Un)root button from a secure button to a normal button and named in (Un)freeze. Now also works for players not in range and offline players. Also added freeze and unfreeze to the quick commands menu.
+	- Fix a bug where refreshing the spy window would sometimes give an error.
+	- Further code cleanup.
+	- Fixed a lua error when trying to open a ticket while the list was being refreshed.
+	- Fixed the auto-refresh of the ticket window and count.
+
+0.3.1
+* Small changes and fixes
+	- Fixed a bug where dropdowns were loaded before checking saved variables, resulting in LUA errors is the defaults needed to be loaded.
+
+0.3
+* Major visible changes:
+	- Added several quick commands (revive, appear, summon, spy) on right clicking someone's name.
+	- Added mail macros.
+	- Added dropdowns for mail and whisper macros when spying someone and when right clicking a name in the game.
+* Small changes and fixes
+	- Changed the regular expression to read ticket listings and tickets from chat, so that it now allows spaces in the created and last modified time (this will make the addon work on new TC revisions).
+	- Fixed a bug where tickets with an empty line at the start would not display correctly.
+	- All regular expressions and functions to read from chat moved to Chatreader.lua.
+	- Load saved variabled in Savedvariables.lua and allow setting defaults in that file (this allows creating a default preset for a server-specific distribution of GM Genie).
+	- Big code cleanup in several areas. Consistent naming for variables and functions, as far as possible without creating unnescessary extra variables.
+
+0.2 and older: no changelogs kept

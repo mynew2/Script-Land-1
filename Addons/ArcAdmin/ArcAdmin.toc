@@ -1,0 +1,96 @@
+## Interface: 30300
+## Title: ArcAdmin
+## Author: ArcAdmin Dev team + TrinityAdmin Dev team + Manground Dev Team
+## Version: 3.3.5a
+## Notes: This addon only works with ArcEmu and maybe Ascent Servers and 3.3.5a clients. Derived from TrinityAdmin. May or may not work with 4.3.4.
+## URL: http://arcemu.org/
+## Name: ArcAdmin
+## License: GPLv3
+## X-Date: 10 August 2010
+## X-eMail: 
+## X-Website: http://arcemu.org/
+## OptionalDeps: AceLibrary,AceEvent-2.0,AceHook-2.1,AceDebug-2.0,AceLocale-2.2,AceConsole-2.0,AceAddon-2.0
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariables: ArcAdminDb
+## SavedVariablesPerCharacter: ArcAdminDbPerChar
+Libraries\AceLibrary\AceLibrary.lua
+Libraries\AceOO-2.0\AceOO-2.0.lua
+Libraries\AceEvent-2.0\AceEvent-2.0.lua
+Libraries\AceHook-2.1\AceHook-2.1.lua
+Libraries\AceDB-2.0\AceDB-2.0.lua
+Libraries\AceDebug-2.0\AceDebug-2.0.lua
+Libraries\AceLocale-2.2\AceLocale-2.2.lua
+Libraries\AceConsole-2.0\AceConsole-2.0.lua
+Libraries\AceAddon-2.0\AceAddon-2.0.lua
+Libraries\Tablet-2.0\Tablet-2.0.lua
+Libraries\DewDrop-2.0\DewDrop-2.0.lua
+Libraries\FrameLib-1.0\FrameLib-1.0.lua
+Libraries\FuBarPlugin-2.0\FuBarPlugin-2.0.lua
+Libraries\Graph-1.0\Graph-1.0.lua
+Locales\enUS.lua
+Locales\deDE.lua
+Locales\frFR.lua
+Locales\fiFI.lua
+Locales\plPL.lua
+Locales\svSV.lua
+Locales\itIT.lua
+Locales\liLI.lua
+Locales\roRO.lua
+Locales\csCZ.lua
+Locales\huHU.lua
+Locales\esES.lua
+Locales\zhCN.lua
+Locales\ptPT.lua
+Locales\ptBR.lua
+Locales\ruRU.lua
+Locales\nlNL.lua
+Locales\buBU.lua
+Locales\strings.lua
+models.lua
+Commands\Commands_Main.lua
+Commands\Commands_Tele.lua
+Commands\Commands_Log.lua
+Commands\Commands_Char.lua
+Commands\Commands_Char2.lua
+Commands\Commands_Ticket.lua
+Commands\Commands_Misc.lua
+Commands\Commands_Server.lua
+Commands\Commands_NPC.lua
+Commands\Commands_NPC2.lua
+Commands\Commands_GO.lua
+Commands\Commands_PvP.lua
+Commands\Commands_Event.lua
+Commands\Commands_RPG.lua
+Commands\Commands_Vendor.lua
+Commands\Commands_Ahbot.lua
+Commands\Commands_Who.lua
+dbc.lua
+TeleportTable.lua
+FunctionInit.lua
+ArcAdmin.lua
+ArcLinkifier.lua
+Frames\ArcFrames_Start.lua
+Frames\ArcFrames_Tabs.lua
+Frames\ArcFrames_MiniMenu.lua
+Frames\ArcFrames_LookupButtons.lua
+Frames\ArcFrames_PopupFrames.lua
+Frames\ArcFrames_SmallPopupFrames.lua
+Frames\ArcFrames_SectionMain.lua
+Frames\ArcFrames_SectionTele.lua
+Frames\ArcFrames_SectionLog.lua
+Frames\ArcFrames_SectionChar.lua
+Frames\ArcFrames_SectionChar2.lua
+Frames\ArcFrames_SectionTicket.lua
+Frames\ArcFrames_SectionMisc.lua
+Frames\ArcFrames_SectionServer.lua
+Frames\ArcFrames_SectionNpc.lua
+Frames\ArcFrames_SectionNpc2.lua
+Frames\ArcFrames_SectionGO.lua
+Frames\ArcFrames_SectionPvP.lua
+Frames\ArcFrames_SectionEvent.lua
+Frames\ArcFrames_SectionRPG.lua
+Frames\ArcFrames_SectionVendor.lua
+Frames\ArcFrames_SectionAhbot.lua
+Frames\ArcFrames_SectionWho.lua
+ArcFrames.lua
