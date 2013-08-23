@@ -3,7 +3,14 @@
 r7175 ??/??/201? The 4.3.4 creature update
 	Zark - NEW NPC - Waypoint (Only GM can see it) (1)
 
-r7151 08/??/2013
+r7151 08/23/2013
+	Zark - NEW NPC - Unknown (7000044)
+	Zark - NEW NPC - Unknown (7000045)
+	Zark - NEW NPC - Unknown (7000046)
+	Zark - NEW NPC - Unknown (7000047)
+	Zark - NEW NPC - Unknown (7000048)
+	Zark - NEW NPC - Unknown (7000049)
+	Zark - NEW NPC - Unknown (7000050)
 
 r7150 08/14/2013
 	Zark - DATABASE - New table "achievements"
