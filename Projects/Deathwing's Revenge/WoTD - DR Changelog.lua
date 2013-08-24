@@ -1,6 +1,17 @@
->>CORE + Database Changelog for: World of the Damned DR v4.7.0 (BETA) - TBA (To Be Announced)
->>CORE + Database Changelog for: World of the Damned DR v4.6.0 (BETA) - TBA (To Be Announced)
->>CORE + Database Changelog for: World of the Damned DR v4.5.2 (BETA) - 08/23/2013
+>>CORE + Database Changelog for: World of the Damned DR v4.7.0 (ALPHA) - TBA (To Be Announced)
+>>CORE + Database Changelog for: World of the Damned DR v4.6.0 (ALPHA) - TBA (To Be Announced)
+>>CORE + Database Changelog for: World of the Damned DR v4.5.2a (ALPHA) - 08/23/2013
+
+r4520a
+	Zark - DATABASE - Fixed an issue that caused table 'world.gameobject_queststarter' not to exist; Thanks to bastos230573
+	Zark - mMaps - Disabled
+	Zark - Various amount of NPC fixes.
+	Zark - Various amount of Mob fixes.
+	Zark - Various amount of Item fixes.
+	Zark - Various amount of Quest fixes.
+	Zark - Various amount of Gossip fixes.
+	
+>>CORE + Database Changelog for: World of the Damned DR v4.5.2 (ALPHA) - 08/23/2013
 
 r4520
 	Zark - CORE - Updated to Latest Revision (34cd8e808eb7ae2915a970213a37eb2c615fd7fe)
@@ -17,7 +28,7 @@ r4520
 	Zark - "Zaxer's Control Panel v2.0" updated to v3.0
 
 
->>CORE + Database Changelog for: World of the Damned DR v4.5.1 (BETA)
+>>CORE + Database Changelog for: World of the Damned DR v4.5.1 (ALPHA)
 
 r4510
 	Zark - CORE - Updated to Latest Revision
@@ -32,7 +43,7 @@ r4510
 	Zark - Various amount of GameObject fixes.
 
 
->>CORE + Database Changelog for: World of the Damned DR v4.5.0 (BETA)
+>>CORE + Database Changelog for: World of the Damned DR v4.5.0 (ALPHA)
 
 r4500
 	Zark - CORE - Updated to Latest Revision
@@ -47,7 +58,7 @@ r4500
 	Zark - Various amount of GameObject fixes.
 
 
->>CORE + Database Changelog for: World of the Damned DR v4.4.0 (BETA)
+>>CORE + Database Changelog for: World of the Damned DR v4.4.0 (ALPHA)
 
 r4400 4/18/2013
 	Zark - GOSSIP - Various amounts of Gossips menu fixes
@@ -163,7 +174,7 @@ r4355
 	Zark - NPC - ([DND] Shaker - Small) (37574)
 	Zark - ZONE - Worgen starting zone missing: NPCs, MOBs, GAMEOBJECTs spawns
 
->>CORE + Database Changelog for: World of the Damned DR v4.3.0 (BETA)
+>>CORE + Database Changelog for: World of the Damned DR v4.3.0 (ALPHA)
 
 r4299
 	Zark - CORE - Updated to Latest Revision
@@ -180,7 +191,7 @@ r4299
 	Zark - Various amount of Spawn fixes
 	Zark - Various amount of GameObject fixes
 	
->>CORE + Database Changelog for: World of the Damned DR v4.2.0 (BETA)
+>>CORE + Database Changelog for: World of the Damned DR v4.2.0 (ALPHA)
 
 r4199
 	Zark - CORE - Updated to Latest Revision
@@ -196,20 +207,20 @@ r4199
 	Zark - Various amount of Spawn fixes.
 	Zark - Various amount of GameObject fixes.
 	
->>CORE + Database Changelog for: World of the Damned DR v4.1.0 (BETA)
+>>CORE + Database Changelog for: World of the Damned DR v4.1.0 (ALPHA)
 
 r4099
 	Zark - CORE - Updated to Latest Revision
 	Zark - DATABASE - Updated to Latest Revision
 	Zark - OPTIMIZATION - Warden Anti-Hack
 
->>CORE + Database Changelog for: World of the Damned DR v4.0.0 (BETA)
+>>CORE + Database Changelog for: World of the Damned DR v4.0.0 (ALPHA)
 
 r3999
 	Zark - CORE - Updated to Latest Revision
 	Zark - DATABASE - Updated to Latest Revision
 
->>CORE + Database Changelog for: World of the Damned DR v3.0.3 (BETA)
+>>CORE + Database Changelog for: World of the Damned DR v3.0.3 (ALPHA)
 
 r3030b
 	Zark - CORE - Optimization
@@ -224,7 +235,7 @@ r3029
 	Zark - CORE - Updated to Latest Revision
 	Zark - Fixes for servers don't load
 
->>CORE + Database Changelog for: World of the Damned DR v3.0.2 (BETA)
+>>CORE + Database Changelog for: World of the Damned DR v3.0.2 (ALPHA)
 
 r3020
 	Zark - NPC - Den Grunt
@@ -396,11 +407,11 @@ r3019
 	Zark - QUEST - Lions for Lambs
 	Zark - QUEST - Beating them Back!
 
->>CORE + Database Changelog for: World of the Damned DR v3.0.0 (BETA)
+>>CORE + Database Changelog for: World of the Damned DR v3.0.0 (ALPHA)
 
 r2999
 	Zark - CORE - Optimization for v4.3.4 support
 	Zark - CORE - Database Powered Update
 	Zark - CORE - Optimization
 
-//<-// Anything below v3 (BETA) is not added as of it being v4.0.6a client //->//
+//<-// Anything below v3 (ALPHA) is not added as of it being v4.0.6a client //->//
