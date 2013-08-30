@@ -1,12 +1,201 @@
---[[ WoTD License - 
+--[[ ArcPro Speculation License - 
 This software is provided as free and open source by the
-team of The WoTD Team. This script was written and is
+team of The ArcPro Speculation Team. This script was written and is
 protected by the GPL v2. Please give credit where credit
 is due, if modifying, redistributing and/or using this 
 software. Thank you.
-Thank: zdroid9770; for the Script
+Author: ArcPro Speculation
 ~~End of License... Please Stand By...
--- WoTD Team, Janurary 19, 2010. ]]
+-- ArcPro Speculation, January 19, 2011 - 2013. ]]
+
+function VentureCoSupervisor_OnCombat(Unit, Event)
+	Unit:RegisterEvent("VentureCoSupervisor_BattleShout", 10000, 2)
+end
+
+function VentureCoSupervisor_BattleShout(pUnit, Event) 
+	pUnit:CastSpell(6673) 
+end
+
+function VentureCoSupervisor_OnLeaveCombat(Unit, Event) 
+	Unit:RemoveEvents() 
+end
+
+function VentureCoSupervisor_OnDied(Unit, Event) 
+	Unit:RemoveEvents()
+end
+
+RegisterUnitEvent(2979, 1, "VentureCoSupervisor_OnCombat")
+RegisterUnitEvent(2979, 2, "VentureCoSupervisor_OnLeaveCombat")
+RegisterUnitEvent(2979, 4, "VentureCoSupervisor_OnDied")
+
+function WirySwoop_OnCombat(Unit, Event)
+	Unit:RegisterEvent("WirySwoop_Swoop", 6000, 0)
+end
+
+function WirySwoop_WirySwoop(pUnit, Event) 
+	pUnit:CastSpell(5708) 
+end
+
+function WirySwoop_OnLeaveCombat(Unit, Event) 
+	Unit:RemoveEvents() 
+end
+
+function WirySwoop_OnDied(Unit, Event) 
+	Unit:RemoveEvents()
+end
+
+RegisterUnitEvent(2969, 1, "WirySwoop_OnCombat")
+RegisterUnitEvent(2969, 2, "WirySwoop_OnLeaveCombat")
+RegisterUnitEvent(2969, 4, "WirySwoop_OnDied")
+
+function Arrachea_OnCombat(Unit, Event)
+	Unit:RegisterEvent("Arrachea_HeadButt", 10000, 0)
+end
+
+function Arrachea_HeadButt(pUnit, Event) 
+	pUnit:FullCastSpellOnTarget(6730, pUnit:GetClosestPlayer()) 
+end
+
+function Arrachea_OnLeaveCombat(Unit, Event) 
+	Unit:RemoveEvents() 
+end
+
+function Arrachea_OnDied(Unit, Event) 
+	Unit:RemoveEvents()
+end
+
+RegisterUnitEvent(3058, 1, "Arrachea_OnCombat")
+RegisterUnitEvent(3058, 2, "Arrachea_OnLeaveCombat")
+RegisterUnitEvent(3058, 4, "Arrachea_OnDied")
+
+function BaelApp_OnCombat(Unit, Event)
+	--Unit:SendChatMessage(12, 0, "Gor eft mitta ta gor-skalf")
+	if(Unit:GetHealthPct() < 15) then
+		Unit:FullCastSpell(2052)
+	end
+end
+
+function BaelApp_OnDead(Unit, Event)
+	Unit:RemoveEvents()
+end
+
+function BaelApp_OnLeaveCombat(Unit, Event)
+	Unit:RemoveEvents()
+end
+
+RegisterUnitEvent(2990, 1, "BaelApp_OnCombat")
+RegisterUnitEvent(2990, 2, "BaelApp_OnLeaveCombat")
+RegisterUnitEvent(2990, 4, "BaelApp_OnDead")
+
+function Mazzranache_OnCombat(Unit, Event)
+	Unit:RegisterEvent("Mazzranache_DeadlyPoison", 10000, 0)
+	Unit:RegisterEvent("Mazzranache_RushingCharge", 8000, 0)
+end
+
+function Mazzranache_DeadlyPoison(pUnit, Event) 
+	pUnit:FullCastSpellOnTarget(3538, pUnit:GetMainTank()) 
+end
+
+function Mazzranache_RushingCharge(pUnit, Event) 
+	pUnit:CastSpell(6268) 
+end
+
+function Mazzranache_OnLeaveCombat(Unit, Event) 
+	Unit:RemoveEvents() 
+end
+
+function Mazzranache_OnDied(Unit, Event) 
+	Unit:RemoveEvents()
+end
+
+RegisterUnitEvent(3068, 1, "Mazzranache_OnCombat")
+RegisterUnitEvent(3068, 2, "Mazzranache_OnLeaveCombat")
+RegisterUnitEvent(3068, 4, "Mazzranache_OnDied")
+
+function SisterHatelash_OnCombat(Unit, Event)
+	Unit:RegisterEvent("SisterHatelash_LightningBarrier", 1000, 1)
+	Unit:RegisterEvent("SisterHatelash_LightningBolt", 8000, 0)
+end
+
+function SisterHatelash_LightningBarrier(pUnit, Event) 
+	pUnit:CastSpell(6960) 
+end
+
+function SisterHatelash_LightningBolt(pUnit, Event) 
+	pUnit:FullCastSpellOnTarget(9532, pUnit:GetClosestPlayer()) 
+end
+
+function SisterHatelash_OnLeaveCombat(Unit, Event) 
+	Unit:RemoveEvents() 
+end
+
+function SisterHatelash_OnDied(Unit, Event) 
+	Unit:RemoveEvents()
+end
+
+RegisterUnitEvent(5785, 1, "SisterHatelash_OnCombat")
+RegisterUnitEvent(5785, 2, "SisterHatelash_OnLeaveCombat")
+RegisterUnitEvent(5785, 4, "SisterHatelash_OnDied")
+
+function Snagglespear_OnCombat(Unit, Event)
+	Unit:RegisterEvent("Snagglespear_Net", 10000, 0)
+end
+
+function Snagglespear_Net(pUnit, Event) 
+	pUnit:FullCastSpellOnTarget(12024, pUnit:GetClosestPlayer()) 
+end
+
+function Snagglespear_OnLeaveCombat(Unit, Event) 
+	Unit:RemoveEvents() 
+end
+
+function Snagglespear_OnDied(Unit, Event) 
+	Unit:RemoveEvents()
+end
+
+RegisterUnitEvent(5786, 1, "Snagglespear_OnCombat")
+RegisterUnitEvent(5786, 2, "Snagglespear_OnLeaveCombat")
+RegisterUnitEvent(5786, 4, "Snagglespear_OnDied")
+
+function Swoop_OnCombat(Unit, Event)
+	Unit:RegisterEvent("Swoop_Swoop", 6000, 0)
+end
+
+function Swoop_Swoop(pUnit, Event) 
+	pUnit:CastSpell(5708) 
+end
+
+function Swoop_OnLeaveCombat(Unit, Event) 
+	Unit:RemoveEvents() 
+end
+
+function Swoop_OnDied(Unit, Event) 
+	Unit:RemoveEvents()
+end
+
+RegisterUnitEvent(2970, 1, "Swoop_OnCombat")
+RegisterUnitEvent(2970, 2, "Swoop_OnLeaveCombat")
+RegisterUnitEvent(2970, 4, "Swoop_OnDied")
+
+function TheRake_OnCombat(Unit, Event)
+	Unit:RegisterEvent("TheRake_MuscleTear", 8000, 0)
+end
+
+function TheRake_MuscleTear(pUnit, Event) 
+	pUnit:FullCastSpellOnTarget(12166, pUnit:GetClosestPlayer()) 
+end
+
+function TheRake_OnLeaveCombat(Unit, Event) 
+	Unit:RemoveEvents() 
+end
+
+function TheRake_OnDied(Unit, Event) 
+	Unit:RemoveEvents()
+end
+
+RegisterUnitEvent(5807, 1, "TheRake_OnCombat")
+RegisterUnitEvent(5807, 2, "TheRake_OnLeaveCombat")
+RegisterUnitEvent(5807, 4, "TheRake_OnDied")
 
 --Bristleback Battleboar
 function BristlebackBattleboar_OnCombat(Unit, Event)
