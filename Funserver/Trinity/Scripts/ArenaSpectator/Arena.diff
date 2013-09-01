@@ -27,7 +27,7 @@ Subject: [PATCH] Implentement Arena-Spectate for Trinity core 3.3.5a last rev
  src/server/game/Scripting/ScriptLoader.cpp         |    4 +-
  src/server/game/Spells/Spell.cpp                   |   15 +
  src/server/scripts/Custom/CMakeLists.txt           |    1 +
- src/server/scripts/Custom/arena_spectator.cpp      |  485 ++++++++++++++++++++
+ src/server/scripts/Custom/arena_spectator.cpp      |  505 ++++++++++++++++++++
  16 files changed, 1170 insertions(+), 16 deletions(-)
  create mode 100644 src/server/game/Battlegrounds/SpectatorAddon.cpp
  create mode 100644 src/server/game/Battlegrounds/SpectatorAddon.h
