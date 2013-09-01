@@ -1,8 +1,24 @@
 >>CORE + Database Changelog for: World of the Damned DR v4.7.0 (ALPHA) - TBA (To Be Announced)
 >>CORE + Database Changelog for: World of the Damned DR v4.6.0 (ALPHA) - TBA (To Be Announced)
->>CORE + Database Changelog for: World of the Damned DR v4.5.2a (ALPHA) - 08/23/2013
 
-r4520a
+r4600
+	Zark - CORE - Updated to Latest Revision (34cd8e808eb7ae2915a970213a37eb2c615fd7fe)
+	Zark - DATABASE - Updated to Latest Revision (ed2494608404299ca919861657f4540cb0932021)
+	Zark - Various amount of NPC fixes.
+	Zark - Various amount of Mob fixes.
+	Zark - Various amount of Item fixes.
+	Zark - Various amount of Quest fixes.
+	Zark - Various amount of Gossip fixes.
+	Zark - Various amount of Zone fixes.
+	Zark - Various amount of Spawn fixes.
+	Zark - Various amount of GameObject fixes.
+
+>>CORE + Database Changelog for: World of the Damned DR v4.5.0 (ALPHA)
+
+r4530 - 09/01/2013
+	Zark - DLL - Fixed an assertion issue with libmysql.dll
+
+r4520a - 08/23/2013
 	Zark - DATABASE - Fixed an issue that caused table 'world.gameobject_queststarter' not to exist; Thanks to bastos230573
 	Zark - mMaps - Disabled
 	Zark - Various amount of NPC fixes.
@@ -10,10 +26,8 @@ r4520a
 	Zark - Various amount of Item fixes.
 	Zark - Various amount of Quest fixes.
 	Zark - Various amount of Gossip fixes.
-	
->>CORE + Database Changelog for: World of the Damned DR v4.5.2 (ALPHA) - 08/23/2013
 
-r4520
+r4520 - 08/23/2013
 	Zark - CORE - Updated to Latest Revision (34cd8e808eb7ae2915a970213a37eb2c615fd7fe)
 	Zark - DATABASE - Updated to Latest Revision (ed2494608404299ca919861657f4540cb0932021)
 	Zark - Various amount of NPC fixes.
@@ -27,9 +41,6 @@ r4520
 	Zark - Various amount of Emote fixes.
 	Zark - "Zaxer's Control Panel v2.0" updated to v3.0
 
-
->>CORE + Database Changelog for: World of the Damned DR v4.5.1 (ALPHA)
-
 r4510
 	Zark - CORE - Updated to Latest Revision
 	Zark - DATABASE - Updated to Latest Revision
@@ -42,9 +53,6 @@ r4510
 	Zark - Various amount of Spawn fixes.
 	Zark - Various amount of GameObject fixes.
 
-
->>CORE + Database Changelog for: World of the Damned DR v4.5.0 (ALPHA)
-
 r4500
 	Zark - CORE - Updated to Latest Revision
 	Zark - DATABASE - Updated to Latest Revision
@@ -56,7 +64,6 @@ r4500
 	Zark - Various amount of Zone fixes.
 	Zark - Various amount of Spawn fixes.
 	Zark - Various amount of GameObject fixes.
-
 
 >>CORE + Database Changelog for: World of the Damned DR v4.4.0 (ALPHA)
 
