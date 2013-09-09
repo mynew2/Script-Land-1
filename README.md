@@ -1,4 +1,4 @@
-# ![logo]()
+# ![logo](http://arcpro-forum.allalla.com/images/logo.png)
 
 ## Content
 
