@@ -1,9 +1,9 @@
 >>CORE + Database Changelog for: World of the Damned DR v4.7.0 (ALPHA) - TBA (To Be Announced)
->>CORE + Database Changelog for: World of the Damned DR v4.6.0 (ALPHA) - TBA (To Be Announced)
+>>CORE + Database Changelog for: World of the Damned DR v4.6.0 (ALPHA) - 09/09/2013
 
-r4600
-	Zark - CORE - Updated to Latest Revision (34cd8e808eb7ae2915a970213a37eb2c615fd7fe)
-	Zark - DATABASE - Updated to Latest Revision (ed2494608404299ca919861657f4540cb0932021)
+r4600 - 09/09/2013
+	Zark - CORE - Updated to Latest Revision (be75ddc2bd99045e53523a06707526b233fd0c32)
+	Zark - DATABASE - Updated to Latest Revision (e07faffe7ade24cab124fc8dd1ad672673d1f2fa)
 	Zark - Various amount of NPC fixes.
 	Zark - Various amount of Mob fixes.
 	Zark - Various amount of Item fixes.
@@ -12,11 +12,24 @@ r4600
 	Zark - Various amount of Zone fixes.
 	Zark - Various amount of Spawn fixes.
 	Zark - Various amount of GameObject fixes.
+	Zark - Various amount of Dungeon fixes.
+	Zark - Various amount of Raid fixes.
+	Zark - Various amount of Zone fixes.
+	Zark - Security - Virus/trojan scan cleaned
+	Zark - Security - Fragments scan cleaned
+	Zark - DBC - Updated v4.6.0
+	Zark - Maps - Updated v4.6.0
+	Zark - vMaps - Updated v4.6.0
+	Zark - Debug - Debug version updated
+	Zark - Release - Release version is now available
+	Zark - DLL - Added libeay32.dll
 
 >>CORE + Database Changelog for: World of the Damned DR v4.5.0 (ALPHA)
 
 r4530 - 09/01/2013
 	Zark - DLL - Fixed an assertion issue with libmysql.dll
+	Zark - Security - Virus/trojan scan cleaned
+	Zark - Security - Fragments scan cleaned
 
 r4520a - 08/23/2013
 	Zark - DATABASE - Fixed an issue that caused table 'world.gameobject_queststarter' not to exist; Thanks to bastos230573
@@ -64,6 +77,8 @@ r4500
 	Zark - Various amount of Zone fixes.
 	Zark - Various amount of Spawn fixes.
 	Zark - Various amount of GameObject fixes.
+	Zark - Security - Virus/trojan scan cleaned
+	Zark - Security - Fragments scan cleaned
 
 >>CORE + Database Changelog for: World of the Damned DR v4.4.0 (ALPHA)
 
@@ -77,6 +92,8 @@ r4400 4/18/2013
 	Zark - LOOT - Various amounts of Loot fixes
 	Zark - NPC - Various amounts of NPC fixes
 	Zark - GAMEOBJECT - Various amounts of Gameobject fixes
+	Zark - Security - Virus/trojan scan cleaned
+	Zark - Security - Fragments scan cleaned
 
 r4397 4/01/2013
 	Zark - NPC - Aeolos
@@ -180,6 +197,8 @@ r4355
 	Zark - NPC - Hammon the Jaded (47569)
 	Zark - NPC - ([DND] Shaker - Small) (37574)
 	Zark - ZONE - Worgen starting zone missing: NPCs, MOBs, GAMEOBJECTs spawns
+	Zark - Security - Virus/trojan scan cleaned
+	Zark - Security - Fragments scan cleaned
 
 >>CORE + Database Changelog for: World of the Damned DR v4.3.0 (ALPHA)
 
@@ -197,6 +216,8 @@ r4299
 	Zark - Various amount of Zone fixes
 	Zark - Various amount of Spawn fixes
 	Zark - Various amount of GameObject fixes
+	Zark - Security - Virus/trojan scan cleaned
+	Zark - Security - Fragments scan cleaned
 	
 >>CORE + Database Changelog for: World of the Damned DR v4.2.0 (ALPHA)
 
@@ -241,6 +262,8 @@ r3030
 r3029
 	Zark - CORE - Updated to Latest Revision
 	Zark - Fixes for servers don't load
+	Zark - Security - Virus/trojan scan cleaned
+	Zark - Security - Fragments scan cleaned
 
 >>CORE + Database Changelog for: World of the Damned DR v3.0.2 (ALPHA)
 
@@ -413,6 +436,8 @@ r3019
 	Zark - NPC - Thaumaturge Altha
 	Zark - QUEST - Lions for Lambs
 	Zark - QUEST - Beating them Back!
+	Zark - Security - Virus/trojan scan cleaned
+	Zark - Security - Fragments scan cleaned
 
 >>CORE + Database Changelog for: World of the Damned DR v3.0.0 (ALPHA)
 
@@ -420,5 +445,7 @@ r2999
 	Zark - CORE - Optimization for v4.3.4 support
 	Zark - CORE - Database Powered Update
 	Zark - CORE - Optimization
+	Zark - Security - Virus/trojan scan cleaned
+	Zark - Security - Fragments scan cleaned
 
 //<-// Anything below v3 (ALPHA) is not added as of it being v4.0.6a client //->//
