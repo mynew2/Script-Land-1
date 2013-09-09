@@ -1,4 +1,4 @@
-# ![logo](http://arcpro-forum.allalla.com/images/logo.png)
+# ![logo](http://arcpro-forum.allalla.com/images/logo2.png)
 
 ## Content
 
