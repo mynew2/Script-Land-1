@@ -54,7 +54,7 @@ r4520 - 08/23/2013
 	Zark - Various amount of Emote fixes.
 	Zark - "Zaxer's Control Panel v2.0" updated to v3.0
 
-r4510
+r4510 - July 21, 2013
 	Zark - CORE - Updated to Latest Revision
 	Zark - DATABASE - Updated to Latest Revision
 	Zark - Various amount of NPC fixes.
@@ -66,7 +66,7 @@ r4510
 	Zark - Various amount of Spawn fixes.
 	Zark - Various amount of GameObject fixes.
 
-r4500
+r4500 - July 05, 2013
 	Zark - CORE - Updated to Latest Revision
 	Zark - DATABASE - Updated to Latest Revision
 	Zark - Various amount of NPC fixes.
@@ -82,7 +82,7 @@ r4500
 
 >>CORE + Database Changelog for: World of the Damned DR v4.4.0 (ALPHA)
 
-r4400 4/18/2013
+r4400 - 4/18/2013
 	Zark - GOSSIP - Various amounts of Gossips menu fixes
 	Zark - LEARN - Various amounts of Trainer fixes
 	Zark - SPELL - Various amounts of Spell fixes
@@ -95,7 +95,7 @@ r4400 4/18/2013
 	Zark - Security - Virus/trojan scan cleaned
 	Zark - Security - Fragments scan cleaned
 
-r4397 4/01/2013
+r4397 - 4/01/2013
 	Zark - NPC - Aeolos
 	Zark - NPC - Butcher
 	Zark - NPC - High Cultist Azennios
@@ -132,7 +132,7 @@ r4397 4/01/2013
 	Zark - NPC - Scarlet Tracking Hound
 
 
-r4372 3/30/2013
+r4372 - 3/30/2013
 	Zark - GAMEOBJECT - Surface Portal (193952)
 	Zark - GAMEOBJECT - Pulsing Crystal (193195)
 	Zark - GAMEOBJECT - Gunship Armory (201873)
@@ -171,10 +171,10 @@ r4372 3/30/2013
 	Zark - NPC - Elementalist Ortell
 	Zark - NPC - Twilight Enforcer
 
-r4368 3/12/2013 - 3/26/2013
+r4368 - 3/12/2013 - 3/26/2013
 	Zark - Core - x64 Bit Support
 
-r4355
+r4355 - 3/11/2013
 	Zark - QUEST - Lycanthoth the Corruptor (25272)
 	Zark - NPC - Alegorn (4210)
 	Zark - NPC - Aessa Silverdew (52645)
