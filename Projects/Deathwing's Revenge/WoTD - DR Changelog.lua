@@ -11,12 +11,13 @@ r4610 - 09/XX/2013
 	Zark - Various amount of Zone fixes.
 	Zark - Various amount of Spawn fixes.
 	Zark - Various amount of GameObject fixes.
-	Grimton1337 - Fixed "The Light of Dawn" quest for Death Knights
+	Grimton1337 - Fixed "The Light of Dawn" quest for Death Knights (experimental)
 	Grimton1337 - Fixed "Chasing Icestorm" quest in Dragonblight
 	Grimton1337 - Re-scripted the "Lich King" in Icecrown Citadel
 	Grimton1337 - Re-scripted the "Escape from Arthas" in Halls of Reflections
 	Grimton1337 - Re-scripted "Marwyn" in Halls of Reflections
 	Grimton1337 - Re-scripted "Falric" in Halls of Reflections
+	Grimton1337 - Fixed an issue for quest "Death's Challenge" where players says the NPC quotes
 
 r4600 - 09/09/2013
 	Zark - CORE - Updated to Latest Revision (be75ddc2bd99045e53523a06707526b233fd0c32)
