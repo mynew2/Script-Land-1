@@ -1,6 +1,23 @@
 >>CORE + Database Changelog for: World of the Damned DR v4.7.0 (ALPHA) - TBA (To Be Announced)
 >>CORE + Database Changelog for: World of the Damned DR v4.6.0 (ALPHA) - 09/09/2013
 
+r4610 - 09/XX/2013
+	Zark - CORE - Updated to Latest Revision (e740332c0b6802be73168826296e157f3974e401)
+	Zark - Various amount of NPC fixes.
+	Zark - Various amount of Mob fixes.
+	Zark - Various amount of Item fixes.
+	Zark - Various amount of Quest fixes.
+	Zark - Various amount of Gossip fixes.
+	Zark - Various amount of Zone fixes.
+	Zark - Various amount of Spawn fixes.
+	Zark - Various amount of GameObject fixes.
+	Grimton1337 - Fixed "The light of Dawn" quest for Death Knights
+	Grimton1337 - Fixed "Chasing Icestorm" quest in Dragonblight
+	Grimton1337 - Re-scripted the "Lich King" in Icecrown Citadel
+	Grimton1337 - Re-scripted the "Escape from Arthas" in Halls of Reflections
+	Grimton1337 - Re-scripted "Marwyn"
+	Grimton1337 - Re-scripted "Falric"
+
 r4600 - 09/09/2013
 	Zark - CORE - Updated to Latest Revision (be75ddc2bd99045e53523a06707526b233fd0c32)
 	Zark - DATABASE - Updated to Latest Revision (e07faffe7ade24cab124fc8dd1ad672673d1f2fa)
@@ -9,7 +26,6 @@ r4600 - 09/09/2013
 	Zark - Various amount of Item fixes.
 	Zark - Various amount of Quest fixes.
 	Zark - Various amount of Gossip fixes.
-	Zark - Various amount of Zone fixes.
 	Zark - Various amount of Spawn fixes.
 	Zark - Various amount of GameObject fixes.
 	Zark - Various amount of Dungeon fixes.
