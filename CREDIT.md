@@ -5,7 +5,7 @@ These people get a thanks from ArcPro Speculation™ who made some of the stuff 
 ## [ArcPro Speculation™ Team] (http://arcpro.sexyi.am)
 | (Founder/Owner) zdroid9770 (Zark / zdroid)
 | (Administrator/Head Developer) Ronvenal (Bobmaster)
-| (Developer(s))
+| (Developer(s)) Dafugzz | Grimton1337 (or Grimtonz1337)
 | (Super Moderator(s)) N/A
 | (Emulators) TrinityCore | ArcEmu | ArcPro
 | (Database/Events) <http://dev.landofelves.net> | <https://github.com/DarkAngel39/Events>
@@ -13,7 +13,7 @@ These people get a thanks from ArcPro Speculation™ who made some of the stuff 
 
 ## Retired ArcPro Speculation™ Team
 | IOwnAPC | xenion64 | ifamous | EternallyMe | Yuki (Mayumi) | SlyGuy | Chibi
-| Grimton1337 (or Grimtonz1337) | Retribution | 
+| Retribution | 
 
 ## Credits to Users
 | zdroid9770 | Ronvenal | QQRofl | stoneharry | xXDeathXx | Rochet2
