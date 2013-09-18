@@ -19,6 +19,9 @@ r4610 - 09/XX/2013
 	Grimton1337 - Re-scripted "Falric" in Halls of Reflections
 	Grimton1337 - Fixed an issue for quest "Death's Challenge" where players says the NPC quotes
 
+r4600a - 09/18/2013
+	Zark - DBC - Updated v4.6.0a
+
 r4600 - 09/09/2013
 	Zark - CORE - Updated to Latest Revision (be75ddc2bd99045e53523a06707526b233fd0c32)
 	Zark - DATABASE - Updated to Latest Revision (e07faffe7ade24cab124fc8dd1ad672673d1f2fa)
