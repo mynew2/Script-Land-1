@@ -1,8 +1,25 @@
->>CORE + Database Changelog for: World of the Damned DR v4.7.0 (ALPHA) - TBA (To Be Announced)
->>CORE + Database Changelog for: World of the Damned DR v4.6.0 (ALPHA) - 09/09/2013
+>>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v5.0.0 (ALPHA) - TBA (To Be Announced)
+>>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v4.9.0 (ALPHA) - TBA (To Be Announced)
+>>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v4.8.0 (ALPHA) - TBA (To Be Announced)
+>>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v4.7.0 (ALPHA) - TBA (To Be Announced)
 
-r4610 - 09/XX/2013
-	Zark - CORE - Updated to Latest Revision (e740332c0b6802be73168826296e157f3974e401)
+r4700 - 10/XX/2013
+	Zark - CORE - Updated to Latest Revision ()
+	Zark - DATABASE - Updated to Latest Revision ()
+	Zark - APACHE - Registration website is now available
+	Grimton1337 - Fixed "The Light of Dawn" quest for Death Knights (experimental)
+	Grimton1337 - Fixed "Chasing Icestorm" quest in Dragonblight
+	Grimton1337 - Re-scripted the "Lich King" in Icecrown Citadel
+	Grimton1337 - Re-scripted the "Escape from Arthas" in Halls of Reflections
+	Grimton1337 - Re-scripted "Marwyn" in Halls of Reflections
+	Grimton1337 - Re-scripted "Falric" in Halls of Reflections
+	Grimton1337 - Fixed an issue for quest "Death`s Challenge" where players says the NPC quotes
+
+>>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v4.6.0 (ALPHA) - 09/09/2013
+
+r4610 - 09/23/2013
+	Zark - CORE - Updated to Latest Revision (f2dff3da38be4dffca204013e917579a1116a817)
+	Zark - DATABASE - Auth table, Character table, and world table revamped
 	Zark - Various amount of NPC fixes.
 	Zark - Various amount of Mob fixes.
 	Zark - Various amount of Item fixes.
@@ -11,13 +28,8 @@ r4610 - 09/XX/2013
 	Zark - Various amount of Zone fixes.
 	Zark - Various amount of Spawn fixes.
 	Zark - Various amount of GameObject fixes.
-	Grimton1337 - Fixed "The Light of Dawn" quest for Death Knights (experimental)
-	Grimton1337 - Fixed "Chasing Icestorm" quest in Dragonblight
-	Grimton1337 - Re-scripted the "Lich King" in Icecrown Citadel
-	Grimton1337 - Re-scripted the "Escape from Arthas" in Halls of Reflections
-	Grimton1337 - Re-scripted "Marwyn" in Halls of Reflections
-	Grimton1337 - Re-scripted "Falric" in Halls of Reflections
-	Grimton1337 - Fixed an issue for quest "Death's Challenge" where players says the NPC quotes
+	Zark - Fixed libeay32.dll out-dated
+	Zark - Fixed a ghost-world (Kalimdor and Eastern Kingdoms is empty w/ No NPCs or Gameobjects)
 
 r4600a - 09/18/2013
 	Zark - DBC - Updated v4.6.0a
@@ -44,7 +56,7 @@ r4600 - 09/09/2013
 	Zark - Release - Release version is now available
 	Zark - DLL - Added libeay32.dll
 
->>CORE + Database Changelog for: World of the Damned DR v4.5.0 (ALPHA)
+>>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v4.5.0 (ALPHA)
 
 r4530 - 09/01/2013
 	Zark - DLL - Fixed an assertion issue with libmysql.dll
@@ -52,7 +64,7 @@ r4530 - 09/01/2013
 	Zark - Security - Fragments scan cleaned
 
 r4520a - 08/23/2013
-	Zark - DATABASE - Fixed an issue that caused table 'world.gameobject_queststarter' not to exist; Thanks to bastos230573
+	Zark - DATABASE - Fixed an issue that caused table `world.gameobject_queststarter` not to exist; Thanks to bastos230573
 	Zark - mMaps - Disabled
 	Zark - Various amount of NPC fixes.
 	Zark - Various amount of Mob fixes.
@@ -72,9 +84,9 @@ r4520 - 08/23/2013
 	Zark - Various amount of Spawn fixes.
 	Zark - Various amount of GameObject fixes.
 	Zark - Various amount of Emote fixes.
-	Zark - "Zaxer's Control Panel v2.0" updated to v3.0
+	Zark - "Zaxer`s Control Panel v2.0" updated to v3.0
 
-r4510 - July 21, 2013
+r4510
 	Zark - CORE - Updated to Latest Revision
 	Zark - DATABASE - Updated to Latest Revision
 	Zark - Various amount of NPC fixes.
@@ -86,7 +98,7 @@ r4510 - July 21, 2013
 	Zark - Various amount of Spawn fixes.
 	Zark - Various amount of GameObject fixes.
 
-r4500 - July 05, 2013
+r4500
 	Zark - CORE - Updated to Latest Revision
 	Zark - DATABASE - Updated to Latest Revision
 	Zark - Various amount of NPC fixes.
@@ -100,9 +112,9 @@ r4500 - July 05, 2013
 	Zark - Security - Virus/trojan scan cleaned
 	Zark - Security - Fragments scan cleaned
 
->>CORE + Database Changelog for: World of the Damned DR v4.4.0 (ALPHA)
+>>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v4.4.0 (ALPHA)
 
-r4400 - 4/18/2013
+r4400 4/18/2013
 	Zark - GOSSIP - Various amounts of Gossips menu fixes
 	Zark - LEARN - Various amounts of Trainer fixes
 	Zark - SPELL - Various amounts of Spell fixes
@@ -115,7 +127,7 @@ r4400 - 4/18/2013
 	Zark - Security - Virus/trojan scan cleaned
 	Zark - Security - Fragments scan cleaned
 
-r4397 - 4/01/2013
+r4397 4/01/2013
 	Zark - NPC - Aeolos
 	Zark - NPC - Butcher
 	Zark - NPC - High Cultist Azennios
@@ -152,7 +164,7 @@ r4397 - 4/01/2013
 	Zark - NPC - Scarlet Tracking Hound
 
 
-r4372 - 3/30/2013
+r4372 3/30/2013
 	Zark - GAMEOBJECT - Surface Portal (193952)
 	Zark - GAMEOBJECT - Pulsing Crystal (193195)
 	Zark - GAMEOBJECT - Gunship Armory (201873)
@@ -191,10 +203,10 @@ r4372 - 3/30/2013
 	Zark - NPC - Elementalist Ortell
 	Zark - NPC - Twilight Enforcer
 
-r4368 - 3/12/2013 - 3/26/2013
+r4368 3/12/2013 - 3/26/2013
 	Zark - Core - x64 Bit Support
 
-r4355 - 3/11/2013
+r4355
 	Zark - QUEST - Lycanthoth the Corruptor (25272)
 	Zark - NPC - Alegorn (4210)
 	Zark - NPC - Aessa Silverdew (52645)
@@ -220,14 +232,14 @@ r4355 - 3/11/2013
 	Zark - Security - Virus/trojan scan cleaned
 	Zark - Security - Fragments scan cleaned
 
->>CORE + Database Changelog for: World of the Damned DR v4.3.0 (ALPHA)
+>>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v4.3.0 (ALPHA)
 
 r4299
 	Zark - CORE - Updated to Latest Revision
 	Zark - DATABASE - Updated to Latest Revision
 	Zark - INSTANCE - Firelands blizzlike spawns
-	Zark - INSTANCE - Zul'Aman blizzlike spawns
-	Zark - INSTANCE - Zul'Gurub blizzlike spawns
+	Zark - INSTANCE - Zul`Aman blizzlike spawns
+	Zark - INSTANCE - Zul`Gurub blizzlike spawns
 	Zark - Various amount of NPC fixes
 	Zark - Various amount of Mob fixes
 	Zark - Various amount of Item fixes
@@ -239,7 +251,7 @@ r4299
 	Zark - Security - Virus/trojan scan cleaned
 	Zark - Security - Fragments scan cleaned
 	
->>CORE + Database Changelog for: World of the Damned DR v4.2.0 (ALPHA)
+>>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v4.2.0 (ALPHA)
 
 r4199
 	Zark - CORE - Updated to Latest Revision
@@ -255,20 +267,20 @@ r4199
 	Zark - Various amount of Spawn fixes.
 	Zark - Various amount of GameObject fixes.
 	
->>CORE + Database Changelog for: World of the Damned DR v4.1.0 (ALPHA)
+>>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v4.1.0 (ALPHA)
 
 r4099
 	Zark - CORE - Updated to Latest Revision
 	Zark - DATABASE - Updated to Latest Revision
 	Zark - OPTIMIZATION - Warden Anti-Hack
 
->>CORE + Database Changelog for: World of the Damned DR v4.0.0 (ALPHA)
+>>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v4.0.0 (ALPHA)
 
 r3999
 	Zark - CORE - Updated to Latest Revision
 	Zark - DATABASE - Updated to Latest Revision
 
->>CORE + Database Changelog for: World of the Damned DR v3.0.3 (ALPHA)
+>>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v3.0.3 (ALPHA)
 
 r3030b
 	Zark - CORE - Optimization
@@ -281,11 +293,11 @@ r3030
 
 r3029
 	Zark - CORE - Updated to Latest Revision
-	Zark - Fixes for servers don't load
+	Zark - Fixes for servers don`t load
 	Zark - Security - Virus/trojan scan cleaned
 	Zark - Security - Fragments scan cleaned
 
->>CORE + Database Changelog for: World of the Damned DR v3.0.2 (ALPHA)
+>>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v3.0.2 (ALPHA)
 
 r3020
 	Zark - NPC - Den Grunt
@@ -326,14 +338,14 @@ r3020
 	Zark - NPC - Shadow-Walker Zuru
 	Zark - NPC - Unjari Feltonguess
 	Zark - NPC - Xantili
-	Zark - NPC - Jo'mah
-	Zark - NPC - Uthel'nay
+	Zark - NPC - Jo`mah
+	Zark - NPC - Uthel`nay
 	Zark - NPC - Zirazi the Star-Gazer
 	Zark - NPC - Sesebi
 	Zark - NPC - Bwemba
 	Zark - NPC - Doris Chiltonius
 	Zark - NPC - Galra
-	Zark - NPC - Councilor Arial D'Anastasis
+	Zark - NPC - Councilor Arial D`Anastasis
 	Zark - NPC - Chieftain Earthbind
 	Zark - NPC - Advisor Willington
 	Zark - NPC - Orgrimmar Brave
@@ -362,7 +374,7 @@ r3020
 	Zark - NPC - Auctioneer Kuvi
 	Zark - NPC - Auctioneer Vizput
 	Zark - NPC - Kurgul
-	Zark - NPC - Champion Uru'zin
+	Zark - NPC - Champion Uru`zin
 	Zark - NPC - Doras
 	Zark - NPC - Lord Itharius
 	Zark - NPC - Baradin Grunt
@@ -402,8 +414,8 @@ r3019
 	Zark - NPC - Auctioneer Fitch
 	Zark - NPC - Auctioneer Jaxon
 	Zark - NPC - Darkmoon Faire Mystic Mage
-	Zark - NPC - Hero's Herald
-	Zark - NPC - Warchief's Herald
+	Zark - NPC - Hero`s Herald
+	Zark - NPC - Warchief`s Herald
 	Zark - NPC - Dawn Radue
 	Zark - NPC - Shay Pressler
 	Zark - NPC - General Marcus Jonathan
@@ -459,7 +471,7 @@ r3019
 	Zark - Security - Virus/trojan scan cleaned
 	Zark - Security - Fragments scan cleaned
 
->>CORE + Database Changelog for: World of the Damned DR v3.0.0 (ALPHA)
+>>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v3.0.0 (ALPHA)
 
 r2999
 	Zark - CORE - Optimization for v4.3.4 support
