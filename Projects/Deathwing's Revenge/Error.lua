@@ -28,6 +28,7 @@ Rebecca Laughlin - 5193 - No option to change tabard (designer) for guild and no
 	GUID:{31075}
 Shay Pressler - 46602 - When you open the vendor, the item tooltip for "Recipe: Broiled Dragon Feast" will come up and never go away (even if you just exit out) until you go to the next page
 	GUID:{31077}
+Officer Pomeroy - 14438 - Missing waypoints
 -----MOB-----
 Stormwind Rat - 49540 - No waypoints/random waypoints
 GUID:{30978, 30979, }
@@ -45,7 +46,7 @@ Balloon Bunch - 209114 - Not suppose to be here until Darkmoon Faire
 	GUID:{46503, 46114}
 Hero`s Call Board - 206111 - See quest: "Guardians of Hyjal: Call of the Ancients"
 	GUID:{45945}
-The Severed Head of Nefarian - 179882 - Needs to spawn when a raid group gets first kill on realm then stays forever until realm resets
+The Severed Head of Nefarian - 179882 - Needs to spawn when a raid group gets first kill on realm
 	GUID:{46410}
 -----ACHIEVEMENTS-----
 Profit Sharing - 5201 - Not counting criteria even when 1 player collects cold, nothing happens. Nor when 5 players have collected. Stays at 00G 00S 00C

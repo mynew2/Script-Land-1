@@ -4,9 +4,8 @@
 >>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v4.7.0 (ALPHA) - TBA (To Be Announced)
 
 r4700 - 10/XX/2013
-	Zark - CORE - Updated to Latest Revision ()
-	Zark - DATABASE - Updated to Latest Revision ()
-	Zark - APACHE - Registration website is now available
+	Zark - CORE - Updated to latest revision ()
+	Zark - DATABASE - Updated to latest revision ()
 	Grimton1337 - Fixed "The Light of Dawn" quest for Death Knights (experimental)
 	Grimton1337 - Fixed "Chasing Icestorm" quest in Dragonblight
 	Grimton1337 - Re-scripted the "Lich King" in Icecrown Citadel
@@ -17,9 +16,16 @@ r4700 - 10/XX/2013
 
 >>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v4.6.0 (ALPHA) - 09/09/2013
 
+r4620 - 09/30/2013
+	Zark - CORE - Updated to latest revision ()
+	Zark - DATABASE - Updated to latest revision ()
+	Zark - DATABASE - Fixed "item_template" not containing up-to-date items
+	Zark - DATABASE - Fixed "characters" not allowing to create a character
+
 r4610 - 09/23/2013
-	Zark - CORE - Updated to Latest Revision (f2dff3da38be4dffca204013e917579a1116a817)
+	Zark - CORE - Updated to latest revision (f2dff3da38be4dffca204013e917579a1116a817)
 	Zark - DATABASE - Auth table, Character table, and world table revamped
+	Zark - APACHE - Registration website is now available
 	Zark - Various amount of NPC fixes.
 	Zark - Various amount of Mob fixes.
 	Zark - Various amount of Item fixes.
@@ -30,13 +36,15 @@ r4610 - 09/23/2013
 	Zark - Various amount of GameObject fixes.
 	Zark - Fixed libeay32.dll out-dated
 	Zark - Fixed a ghost-world (Kalimdor and Eastern Kingdoms is empty w/ No NPCs or Gameobjects)
+	Zark - Release - Release version updated
+	Zark - Debug - Debug version updated
 
 r4600a - 09/18/2013
 	Zark - DBC - Updated v4.6.0a
 
 r4600 - 09/09/2013
-	Zark - CORE - Updated to Latest Revision (be75ddc2bd99045e53523a06707526b233fd0c32)
-	Zark - DATABASE - Updated to Latest Revision (e07faffe7ade24cab124fc8dd1ad672673d1f2fa)
+	Zark - CORE - Updated to latest revision (be75ddc2bd99045e53523a06707526b233fd0c32)
+	Zark - DATABASE - Updated to latest revision (e07faffe7ade24cab124fc8dd1ad672673d1f2fa)
 	Zark - Various amount of NPC fixes.
 	Zark - Various amount of Mob fixes.
 	Zark - Various amount of Item fixes.
@@ -73,8 +81,8 @@ r4520a - 08/23/2013
 	Zark - Various amount of Gossip fixes.
 
 r4520 - 08/23/2013
-	Zark - CORE - Updated to Latest Revision (34cd8e808eb7ae2915a970213a37eb2c615fd7fe)
-	Zark - DATABASE - Updated to Latest Revision (ed2494608404299ca919861657f4540cb0932021)
+	Zark - CORE - Updated to latest revision (34cd8e808eb7ae2915a970213a37eb2c615fd7fe)
+	Zark - DATABASE - Updated to latest revision (ed2494608404299ca919861657f4540cb0932021)
 	Zark - Various amount of NPC fixes.
 	Zark - Various amount of Mob fixes.
 	Zark - Various amount of Item fixes.
@@ -87,8 +95,8 @@ r4520 - 08/23/2013
 	Zark - "Zaxer`s Control Panel v2.0" updated to v3.0
 
 r4510
-	Zark - CORE - Updated to Latest Revision
-	Zark - DATABASE - Updated to Latest Revision
+	Zark - CORE - Updated to latest revision
+	Zark - DATABASE - Updated to latest revision
 	Zark - Various amount of NPC fixes.
 	Zark - Various amount of Mob fixes.
 	Zark - Various amount of Item fixes.
@@ -99,8 +107,8 @@ r4510
 	Zark - Various amount of GameObject fixes.
 
 r4500
-	Zark - CORE - Updated to Latest Revision
-	Zark - DATABASE - Updated to Latest Revision
+	Zark - CORE - Updated to latest revision
+	Zark - DATABASE - Updated to latest revision
 	Zark - Various amount of NPC fixes.
 	Zark - Various amount of Mob fixes.
 	Zark - Various amount of Item fixes.
@@ -114,7 +122,7 @@ r4500
 
 >>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v4.4.0 (ALPHA)
 
-r4400 4/18/2013
+r4400 - 4/18/2013
 	Zark - GOSSIP - Various amounts of Gossips menu fixes
 	Zark - LEARN - Various amounts of Trainer fixes
 	Zark - SPELL - Various amounts of Spell fixes
@@ -127,7 +135,7 @@ r4400 4/18/2013
 	Zark - Security - Virus/trojan scan cleaned
 	Zark - Security - Fragments scan cleaned
 
-r4397 4/01/2013
+r4397 - 4/01/2013
 	Zark - NPC - Aeolos
 	Zark - NPC - Butcher
 	Zark - NPC - High Cultist Azennios
@@ -164,7 +172,7 @@ r4397 4/01/2013
 	Zark - NPC - Scarlet Tracking Hound
 
 
-r4372 3/30/2013
+r4372 - 3/30/2013
 	Zark - GAMEOBJECT - Surface Portal (193952)
 	Zark - GAMEOBJECT - Pulsing Crystal (193195)
 	Zark - GAMEOBJECT - Gunship Armory (201873)
@@ -235,8 +243,8 @@ r4355
 >>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v4.3.0 (ALPHA)
 
 r4299
-	Zark - CORE - Updated to Latest Revision
-	Zark - DATABASE - Updated to Latest Revision
+	Zark - CORE - Updated to latest revision
+	Zark - DATABASE - Updated to latest revision
 	Zark - INSTANCE - Firelands blizzlike spawns
 	Zark - INSTANCE - Zul`Aman blizzlike spawns
 	Zark - INSTANCE - Zul`Gurub blizzlike spawns
@@ -254,8 +262,8 @@ r4299
 >>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v4.2.0 (ALPHA)
 
 r4199
-	Zark - CORE - Updated to Latest Revision
-	Zark - DATABASE - Updated to Latest Revision
+	Zark - CORE - Updated to latest revision
+	Zark - DATABASE - Updated to latest revision
 	Zark - OPTIMIZATION - Warden Anti-Hack
 	Zark - INSTANCE - Firelands Revamped
 	Zark - Various amount of NPC fixes.
@@ -270,15 +278,15 @@ r4199
 >>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v4.1.0 (ALPHA)
 
 r4099
-	Zark - CORE - Updated to Latest Revision
-	Zark - DATABASE - Updated to Latest Revision
+	Zark - CORE - Updated to latest revision
+	Zark - DATABASE - Updated to latest revision
 	Zark - OPTIMIZATION - Warden Anti-Hack
 
 >>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v4.0.0 (ALPHA)
 
 r3999
-	Zark - CORE - Updated to Latest Revision
-	Zark - DATABASE - Updated to Latest Revision
+	Zark - CORE - Updated to latest revision
+	Zark - DATABASE - Updated to latest revision
 
 >>CORE + Database Changelog for: World of the Damned Deathwing`s Revenge v3.0.3 (ALPHA)
 
@@ -292,7 +300,7 @@ r3030
 	Zark - CORE - Optimization
 
 r3029
-	Zark - CORE - Updated to Latest Revision
+	Zark - CORE - Updated to latest revision
 	Zark - Fixes for servers don`t load
 	Zark - Security - Virus/trojan scan cleaned
 	Zark - Security - Fragments scan cleaned
